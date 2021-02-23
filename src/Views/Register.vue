@@ -113,7 +113,13 @@ export default {
 <style lang="scss" scoped>
 .register {
   background: url("https://dms.medbarnagency.com/images/assets/img@auth-up.svg");
-
+  width: 100%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 20% 80% !important;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   &__ui__wrapper-large {
     width: 100%;
     min-height: 800px;
