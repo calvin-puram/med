@@ -12,6 +12,7 @@
               >
                 Create your preferred account
               </h3>
+
               <div class="row">
                 <router-link to="/register/donor" class="col-lg-4 mb-3">
                   <div>
@@ -122,7 +123,7 @@ export default {
   transition: all 0.5s ease;
   &__ui__wrapper-large {
     width: 100%;
-    min-height: 800px;
+    min-height: 100vh;
     padding: 5em 0;
     padding-bottom: 0;
   }
@@ -130,6 +131,11 @@ export default {
   &__ui-wrapper {
     width: 100%;
     padding: 3em 0;
+  }
+
+  .auth--bx.ui-text-center {
+    padding: 2.3rem 2rem;
+    height: 289px;
   }
 
   .font-weight-bold {

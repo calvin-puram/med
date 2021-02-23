@@ -79,7 +79,6 @@ export default {
 <style lang="scss" scoped>
 .login {
   .frm--cstm.auth .btn {
-    // padding: 0.8rem 2.4rem;
     width: 190px;
     height: 50px;
     font-size: 14px;

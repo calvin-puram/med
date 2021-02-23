@@ -58,7 +58,6 @@
                       <div class="d-flex align-items-center">
                         <span>
                           <router-link
-                            class="font-quicksandlight"
                             style="cursor: pointer;"
                             to="forgot_password"
                             >Forgot Password?</router-link
@@ -103,7 +102,7 @@ export default {
 .login {
   &__ui__wrapper-large {
     width: 100%;
-    min-height: 800px;
+    min-height: 100vh;
     padding: 5em 0;
     padding-bottom: 0;
   }
@@ -118,8 +117,8 @@ export default {
   }
 
   &__form-space {
-    padding-left: 3em !important;
-    padding-right: 3em !important;
+    padding-left: 3em;
+    padding-right: 3em;
   }
 
   &__form--white .bg-white {
@@ -127,7 +126,7 @@ export default {
   }
 
   .bg-white {
-    background-color: #fff !important;
+    background-color: #fff;
   }
 
   .ui-rounded-small {
@@ -241,7 +240,6 @@ export default {
   }
 
   .frm--cstm.auth .btn {
-    // padding: 0.8rem 3.4rem;
     width: 160px;
     height: 50px;
   }
@@ -279,8 +277,8 @@ export default {
     }
 
     .login__form-space {
-      padding-left: 1.3em !important;
-      padding-right: 1.3em !important;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
     }
 
     &__form--white .btn {
@@ -289,6 +287,19 @@ export default {
 
     &__form--white .d-flex {
       display: block !important;
+      text-align: center;
+    }
+
+    &__ui__wrapper-large {
+      min-height: 100vh;
+    }
+
+    .ml-auto {
+      margin-left: 0;
+    }
+
+    .frm--cstm.auth .btn {
+      margin-top: 0.9rem;
     }
   }
 }

@@ -18,26 +18,23 @@
                         style="width: 100px; margin-top: 30px;"
                       />
                       <div
-                        class="d-flex align-items-center auth--brand mrgb3 pt-5"
+                        class="d-flex align-items-center auth--brand mrgb3 pt-5 form__intro"
                       >
                         <p
                           class="font-quicksandregular brand-dgreen fs-20 mrgb0 font-weight-bold"
                         >
                           Create a donor/surrogate account
                         </p>
-                        <div class="ml-auto">
-                          <button
+                        <div class="ml-auto centralize">
+                          <div
                             class="brand-dgreen font-quicksandsemibold fs-16"
                           >
-                            <span
-                              class="fe fe-arrow-left"
-                              style="position: relative; top: 0px;"
-                            >
-                              &#8592;
+                            <span class="back__btn">
+                              <img src="@/assets/back.svg" alt="back arrow" />
                             </span>
                             &nbsp;
                             <router-link to="/register">Go Back</router-link>
-                          </button>
+                          </div>
                         </div>
                       </div>
 
@@ -273,7 +270,7 @@
 
                         <div class="form-group mrgt3 mrgb0">
                           <div class="d-flex align-items-center">
-                            <div class="ml-auto">
+                            <div class="ml-auto center_btn">
                               <button
                                 class="btn bg-brand-green onwhite font-quicksandmedium btn-sm"
                               >
@@ -331,7 +328,7 @@ export default {
   background-position: 20% 80% !important;
   &__ui__wrapper-large {
     width: 100%;
-    min-height: 800px;
+    min-height: 100vh;
     padding: 5em 0;
     padding-bottom: 0;
   }
@@ -339,6 +336,12 @@ export default {
   &__ui-wrapper {
     width: 100%;
     padding: 3em 0;
+  }
+
+
+  .back__btn {
+    position: relative;
+    top: 0px;
   }
 
   &__form-space {
@@ -447,6 +450,36 @@ export default {
   }
   .mrgb2 {
     margin-bottom: 2em !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .form {
+    &__intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .centralize {
+      margin-left: 0 !important;
+      margin-top: 1rem;
+    }
+
+    .form__form-space {
+      padding-left: 0.5em !important;
+      padding-right: 0.5em !important;
+    }
+
+    .center_btn {
+      margin-left: 0 !important;
+    }
+
+    .d-flex {
+      display: flex !important;
+      flex-direction: column;
+    }
   }
 }
 </style>
