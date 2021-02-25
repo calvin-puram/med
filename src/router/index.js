@@ -10,7 +10,7 @@ import Clinic from "@/views/Clinic";
 import Agent from "@/views/Agent";
 import ClinicDashboard from "@/views/Dashboard";
 
-export default [
+const routes = [
   {
     name: "home",
     path: "/",
