@@ -2,13 +2,13 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 // import routes from "./routes";
 
-import Login from "@/views/Login";
-import ForgotPassword from "@/views/ForgotPassword";
-import Register from "@/views/Register";
-import Donor from "@/views/Donor";
-import Clinic from "@/views/Clinic";
-import Agent from "@/views/Agent";
-import ClinicDashboard from "@/views/Dashboard";
+import Login from "@/Views/Login";
+import ForgotPassword from "@/Views/ForgotPassword";
+import Register from "@/Views/Register";
+import Donor from "@/Views/Donor";
+import Clinic from "@/Views/Clinic";
+import Agent from "@/Views/Agent";
+import ClinicDashboard from "@/Views/Dashboard";
 
 const routes = [
   {
