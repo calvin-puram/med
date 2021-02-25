@@ -226,7 +226,7 @@
 
 <script>
 import Datepicker from "vuejs-datepicker";
-import states from "@/utils/state";
+import states from "@/Utils/state";
 export default {
   components: {
     Datepicker,
