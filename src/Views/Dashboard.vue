@@ -9,20 +9,19 @@
               alt="Logo"
               style="width: 80px; height: 80px;"
             />
-            <p class="brand-dblue font-quicksandsemibold fs-15 mrgt1 mrgb0">
+            <p class="brand-dblue font-quicksandsemibold fs-15 mrgt1 mb-0">
               metro
             </p>
             <span class="font-quicksandmedium brand-green">Profile</span></a
           >
           <div class="pdr1 d-sm-none">
             <div class="hmb--btn but1">
-              <span class="fe fe-menu fs-20 onsilverlight ui-hide-mobile-only"
+              <span class=" fs-20 onsilverlight ui-hide-mobile-only"
                 ><i class="fas fa-bars"></i
               ></span>
             </div>
             <div class="hmm--btn but2">
-              <span
-                class="fe fe-menu fs-20 brand-lendlot-blue ui-show-mobile-only"
+              <span class=" fs-20 brand-lendlot-blue ui-show-mobile-only"
                 ><i class="fas fa-bars"></i
               ></span>
             </div>
@@ -139,13 +138,13 @@
                   <div class="pdr1">
                     <div class="hmb--btn but1">
                       <i
-                        class="fas fa-bars mr-5 onsilverlight fs-20 ui-hide-mobile-only"
+                        class="fas fa-bars mr-5 onsilverlight fs-20 mt-2 ui-hide-mobile-only"
                       ></i>
                     </div>
                   </div>
                   <div>
                     <p class="mb-0">
-                      <button class="d-sm-none mr-4">
+                      <button class="d-sm-none ">
                         <span
                           class="fe fe-menu fs-20 onsilverlight"
                         ></span></button
