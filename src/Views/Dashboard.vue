@@ -293,6 +293,9 @@ export default {};
 
 <style lang="scss">
 @import "../design/";
+.body {
+  background: #f5f8fd;
+}
 .text__h5 {
   color: rgb(51, 66, 97);
 }
