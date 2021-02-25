@@ -29,7 +29,9 @@
                         placeholder="Input email "
                         id="login-name"
                         required=""
-                        style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");'
+                        style="
+                          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=');
+                        "
                       />
                     </div>
 
@@ -38,7 +40,7 @@
                         <span>
                           <router-link
                             class="font-quicksandlight"
-                            style="cursor: pointer;"
+                            style="cursor: pointer"
                             to="/"
                             >SIGN IN</router-link
                           >

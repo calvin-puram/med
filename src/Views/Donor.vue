@@ -1,7 +1,7 @@
 <template>
   <div class="form">
     <section
-      class=" form__ui__wrapper-large form__ui-full-bg-norm ui-height-full"
+      class="form__ui__wrapper-large form__ui-full-bg-norm ui-height-full"
     >
       <div class="container-fluid">
         <div class="row">
@@ -15,7 +15,7 @@
                       <img
                         src="https://dms.medbarnagency.com/images/assets/medbarn.jpeg"
                         alt="medbarn"
-                        style="width: 100px; margin-top: 30px;"
+                        style="width: 100px; margin-top: 30px"
                       />
                       <div
                         class="d-flex align-items-center auth--brand mrgb3 pt-5 form__intro"
@@ -112,9 +112,9 @@
                         <div class="row">
                           <div class="col-md-6">
                             <div class="form-group select__padding">
-                              <label class="fs-14  brand-dblue">Country</label>
+                              <label class="fs-14 brand-dblue">Country</label>
                               <select
-                                class="form-control  custom-select"
+                                class="form-control custom-select"
                                 required
                               >
                                 <option value="">Select your Country</option>
@@ -122,8 +122,9 @@
                                   :value="country"
                                   v-for="country in countries"
                                   :key="country.split(0, 1)"
-                                  >{{ country }}</option
                                 >
+                                  {{ country }}
+                                </option>
                               </select>
                             </div>
                           </div>
@@ -139,12 +140,13 @@
                               <select
                                 class="form-control font-quicksandregular custom-select"
                                 required=""
-                                ><option value="">Select your ethnicity</option
-                                ><option value="Yoruba">Yoruba</option
-                                ><option value="Igbo">Igbo</option
-                                ><option value="Hausa">Hausa</option
-                                ><option value="Others">Others</option></select
                               >
+                                <option value="">Select your ethnicity</option>
+                                <option value="Yoruba">Yoruba</option>
+                                <option value="Igbo">Igbo</option>
+                                <option value="Hausa">Hausa</option>
+                                <option value="Others">Others</option>
+                              </select>
                             </div>
                           </div>
 
@@ -321,11 +323,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../design/";
 .form {
-  background: url("https://dms.medbarnagency.com/images/assets/img@auth-up.svg");
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: 20% 80% !important;
+  @include background-img(
+    "https://dms.medbarnagency.com/images/assets/img@auth-up.svg"
+  );
   &__ui__wrapper-large {
     width: 100%;
     min-height: 100vh;
@@ -337,7 +339,6 @@ export default {
     width: 100%;
     padding: 3em 0;
   }
-
 
   .back__btn {
     position: relative;

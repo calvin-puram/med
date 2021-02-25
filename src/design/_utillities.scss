@@ -1,0 +1,7 @@
+@mixin background-img($img) {
+  background: url($img);
+  width: 100%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 20% 80% !important;
+}

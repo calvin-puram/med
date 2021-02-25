@@ -1,7 +1,7 @@
 <template>
   <div class="register">
     <section
-      class=" register__ui__wrapper-large register__ui-full-bg-norm ui-height-full"
+      class="register__ui__wrapper-large register__ui-full-bg-norm ui-height-full"
     >
       <div class="container-fluid">
         <div class="row">
@@ -112,15 +112,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../design/";
 .register {
-  background: url("https://dms.medbarnagency.com/images/assets/img@auth-up.svg");
-  width: 100%;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: 20% 80% !important;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  @include background-img(
+    "https://dms.medbarnagency.com/images/assets/img@auth-up.svg"
+  );
   &__ui__wrapper-large {
     width: 100%;
     min-height: 100vh;

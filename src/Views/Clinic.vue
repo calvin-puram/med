@@ -1,7 +1,7 @@
 <template>
   <div class="form">
     <section
-      class=" form__ui__wrapper-large form__ui-full-bg-norm ui-height-full"
+      class="form__ui__wrapper-large form__ui-full-bg-norm ui-height-full"
     >
       <div class="container-fluid">
         <div class="row">
@@ -15,7 +15,7 @@
                       <img
                         src="https://dms.medbarnagency.com/images/assets/medbarn.jpeg"
                         alt="medbarn"
-                        style="width: 100px; margin-top: 30px;"
+                        style="width: 100px; margin-top: 30px"
                       />
                       <div
                         class="d-flex align-items-center auth--brand mrgb3 pt-5"
@@ -31,7 +31,7 @@
                           >
                             <span
                               class="fe fe-arrow-left"
-                              style="position: relative; top: 0px;"
+                              style="position: relative; top: 0px"
                             >
                               <img src="@/assets/back.svg" alt="back arrow" />
                             </span>
@@ -41,7 +41,7 @@
                         </div>
                       </div>
 
-                      <form class="">
+                      <form @submit.prevent="handlesubmit">
                         <div class="row">
                           <div class="col-md-6">
                             <div class="form-group">
@@ -119,7 +119,7 @@
                         <div class="row">
                           <div class="col-md-12">
                             <div class="form-group select__padding">
-                              <label class="fs-14  brand-dblue"
+                              <label class="fs-14 brand-dblue"
                                 >Official address</label
                               >
                               <input
@@ -141,7 +141,7 @@
                                 >State</label
                               >
                               <select
-                                class="form-control  custom-select"
+                                class="form-control custom-select"
                                 required
                               >
                                 <option value="">Select state</option>
@@ -149,8 +149,9 @@
                                   :value="state"
                                   v-for="state in states"
                                   :key="state"
-                                  >{{ state }}</option
                                 >
+                                  {{ state }}
+                                </option>
                               </select>
                             </div>
                           </div>
@@ -185,7 +186,7 @@
                                   >
                                   <span
                                     class="font-quicksandsemibold brand-green"
-                                    style="cursor: pointer;"
+                                    style="cursor: pointer"
                                     >terms &amp; conditions</span
                                   ></span
                                 ></label
@@ -225,7 +226,7 @@
 
 <script>
 import Datepicker from "vuejs-datepicker";
-import states from "@/Utils/state";
+import states from "@/utils/state";
 export default {
   components: {
     Datepicker,
@@ -234,6 +235,11 @@ export default {
     return {
       states,
     };
+  },
+  methods: {
+    handlesubmit() {
+      this.$router.push("/clinic/home");
+    },
   },
 };
 </script>

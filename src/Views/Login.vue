@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <section
-      class=" login__ui__wrapper-large login__ui-full-bg-norm ui-height-full"
+      class="login__ui__wrapper-large login__ui-full-bg-norm ui-height-full"
     >
       <div class="container-fluid">
         <div class="row">
@@ -36,7 +36,9 @@
                         placeholder="Input email or phone"
                         id="login-name"
                         required=""
-                        style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");'
+                        style="
+                          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=');
+                        "
                       />
                     </div>
 
@@ -50,7 +52,10 @@
                         placeholder="Enter your password"
                         id="login-pass"
                         required=""
-                        style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII="); cursor: auto;'
+                        style="
+                          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=');
+                          cursor: auto;
+                        "
                       />
                     </div>
 
@@ -58,7 +63,7 @@
                       <div class="d-flex align-items-center">
                         <span>
                           <router-link
-                            style="cursor: pointer;"
+                            style="cursor: pointer"
                             to="forgot_password"
                             >Forgot Password?</router-link
                           >
@@ -99,7 +104,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../design/";
 .login {
+  @include background-img(
+    "https://dms.medbarnagency.com/images/assets/img@auth-in.svg"
+  );
   &__ui__wrapper-large {
     width: 100%;
     min-height: 100vh;
