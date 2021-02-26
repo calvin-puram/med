@@ -9,11 +9,11 @@ import camelCase from "lodash/camelCase";
 
 // automatic component registration
 const requireComponent = require.context(
-  ".",
+  "./components",
 
   true,
 
-  /_base-[A-Z]\w+\.(vue|js)$/
+  /Base[A-Z]\w+\.(vue|js)$/
 );
 
 requireComponent.keys().forEach((fileName) => {

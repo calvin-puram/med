@@ -378,10 +378,7 @@ export default {
   .brand-dgreen a {
     color: #125747 !important;
   }
-  .font-quicksandregular,
-  .font-quicksandregular a {
-    font-family: "quicksandregular" !important;
-  }
+
   .brand-dblue,
   .brand-dblue a {
     color: #334261 !important;

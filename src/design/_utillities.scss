@@ -5,3 +5,10 @@
   background-repeat: no-repeat !important;
   background-position: 20% 80% !important;
 }
+
+@mixin ui-full-bg-norm($img) {
+  background: url($img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
