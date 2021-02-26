@@ -6,6 +6,7 @@
           ><img
             src="https://dms.medbarnagency.com/images/assets/icon@logo-c.svg"
             alt="Logo"
+            width="50px"
           />
           <p class="brand-dblue  fs-15 mt-1 mb-0">
             metro
@@ -40,8 +41,8 @@
               <img
                 src="https://dms.medbarnagency.com/images/assets/requests.svg"
                 alt="message icon"
-                width="45px"
-                height="45px"
+                width="26px"
+                height="26px"
               />
             </router-link>
           </li>
