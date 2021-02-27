@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <Sidebar home="/clinic/home" v-if="!menuIcons" />
-    <SideIcons home="/clinic/home" v-else />
+    <SideIcons home="/clinic/home" v-else class="d-md-none mobile" />
     <main v-if="menuIcons" class="ui-dashboard-body ">
       <div>
         <div>
@@ -287,5 +287,11 @@ export default {
 
 .sideWidth {
   padding-left: 0px;
+}
+
+@media (max-width: 600px) {
+  .mobile {
+    display: none;
+  }
 }
 </style>

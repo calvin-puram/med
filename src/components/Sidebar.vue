@@ -1,5 +1,5 @@
 ]<template>
-  <section class="ui-sidebar ssbar--open">
+  <section class="ui-sidebar ssbar--open ">
     <div class="ui-sidebar-primary ssbar--open">
       <div class="ui-sidebar-primary-header ui-text-center">
         <router-link to="/clinic/profile" class="ui-sidebar-primary-logo"
@@ -7,14 +7,12 @@
             src="https://dms.medbarnagency.com/images/assets/icon@logo-c.svg"
             alt="Logo"
           />
-          <p class="brand-dblue font-quicksandsemibold fs-15 mt-1 mb-0">
+          <p class="brand-dblue  fs-15 mt-1 mb-0">
             metro
           </p>
-          <span class="font-quicksandmedium brand-green"
-            >Profile</span
-          ></router-link
+          <span class=" brand-green">Profile</span></router-link
         >
-        <div class="pdr1 d-sm-none">
+        <!-- <div class="pdr1 d-sm-none">
           <div class="hmb--btn but1">
             <span class=" fs-20 onsilverlight ui-hide-mobile-only"
               ><i class="fas fa-bars"></i
@@ -25,18 +23,16 @@
               ><i class="fas fa-bars"></i
             ></span>
           </div>
-        </div>
+        </div> -->
       </div>
-      <div class="ui-sidebar-primary-body">
+      <div class="ui-sidebar-primary-body ">
         <ul class="ui-sidebar-primary-links">
           <li>
             <router-link :to="home" class="ui-icon-animate side-active">
               <img
                 src="https://dms.medbarnagency.com/images/assets/icon@home.svg"
                 alt="home"
-              /><span class="lnk--text brand-dblue font-quicksandsemibold fs-16"
-                >Home</span
-              >
+              /><span class="lnk--text brand-dblue  fs-16">Home</span>
             </router-link>
           </li>
           <li>
@@ -49,9 +45,7 @@
                 src="https://dms.medbarnagency.com/images/assets/requests.svg"
                 alt="requests"
                 style="width: 20px; margin-right: 13px; margin-left: 13px;"
-              /><span class="lnk--text brand-dblue font-quicksandsemibold fs-16"
-                >Requests</span
-              ></a
+              /><span class="lnk--text brand-dblue  fs-16">Requests</span></a
             >
           </li>
           <li>
@@ -59,9 +53,7 @@
               ><img
                 src="https://dms.medbarnagency.com/images/assets/icon@donor.svg"
                 alt="visits"
-              /><span class="lnk--text brand-dblue font-quicksandsemibold fs-16"
-                >Visits</span
-              ></a
+              /><span class="lnk--text brand-dblue  fs-16">Visits</span></a
             >
           </li>
           <li>
@@ -72,7 +64,7 @@
               ><img
                 src="https://dms.medbarnagency.com/images/assets/icon@card.svg"
                 alt="transactions"
-              /><span class="lnk--text brand-dblue font-quicksandsemibold fs-16"
+              /><span class="lnk--text brand-dblue  fs-16"
                 >Transactions</span
               ></a
             >
@@ -85,10 +77,8 @@
               ><img
                 src="https://dms.medbarnagency.com/images/assets/icon@bell.svg"
                 alt="notifications"
-              /><span class="lnk--text brand-dblue font-quicksandsemibold fs-16"
-                >Notifications</span
-              ><span
-                class="lnk--text brand-orange ui-pull-right font-quicksandsemibold fs-14"
+              /><span class="lnk--text brand-dblue  fs-16">Notifications</span
+              ><span class="lnk--text brand-orange ui-pull-right ml-3  fs-14"
                 >0</span
               ></a
             >
@@ -131,4 +121,33 @@ export default {
 </script>
 <style lang="scss">
 @import "../design/";
+@media screen and (max-width: 1024px) {
+  .ui-sidebar-primary-body {
+    top: 190px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 789px) {
+  .ui-sidebar {
+    margin-left: 65px;
+    width: 220px !important;
+  }
+
+  .ui-sidebar-primary-body {
+    height: 700% !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .ui-sidebar {
+    margin-left: 65px;
+    width: 220px !important;
+    z-index: 2000;
+  }
+
+  .ui-sidebar-primary-body {
+    height: 700% !important;
+  }
+}
 </style>

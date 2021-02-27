@@ -1,6 +1,6 @@
 ]<template>
   <section class="ui-sidebar  sdbr--cllps">
-    <div class=" ui-sidebar-primary">
+    <div class=" ui-sidebar-primary1">
       <div class="ui-sidebar-primary-header ui-text-center">
         <router-link to="/clinic/profile" class="ui-sidebar-primary-logo"
           ><img
@@ -29,7 +29,11 @@
       <div class="ui-sidebar-primary-body">
         <ul class="ui-sidebar-primary-links">
           <li>
-            <router-link :to="home" class="ui-icon-animate side-active">
+            <router-link
+              :to="home"
+              class="ui-icon-animate side-active"
+              title="Home"
+            >
               <img
                 src="https://dms.medbarnagency.com/images/assets/icon@home.svg"
                 alt="home"
@@ -37,7 +41,11 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/clinic/requests" class="ui-icon-animate ">
+            <router-link
+              to="/clinic/requests"
+              class="ui-icon-animate "
+              title="Request"
+            >
               <img
                 src="https://dms.medbarnagency.com/images/assets/requests.svg"
                 alt="message icon"
@@ -47,7 +55,11 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/clinic/donors" class="ui-icon-animate ">
+            <router-link
+              to="/clinic/donors"
+              class="ui-icon-animate "
+              title="Donors"
+            >
               <img
                 src="https://dms.medbarnagency.com/images/assets/icon@donor.svg"
                 alt="donors"
@@ -55,7 +67,11 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/clinic/transactions" class="ui-icon-animate ">
+            <router-link
+              to="/clinic/transactions"
+              class="ui-icon-animate "
+              title="Transactions"
+            >
               <img
                 src="https://dms.medbarnagency.com/images/assets/icon@card.svg"
                 alt="transactions"
@@ -63,7 +79,11 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/clinic/notifications" class="ui-icon-animate ">
+            <router-link
+              to="/clinic/notifications"
+              class="ui-icon-animate "
+              title="Notifications"
+            >
               <img
                 src="https://dms.medbarnagency.com/images/assets/icon@bell.svg"
                 alt="notifications"
@@ -71,7 +91,11 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/clinic/users" class="ui-icon-animate ">
+            <router-link
+              to="/clinic/users"
+              class="ui-icon-animate "
+              title="Users"
+            >
               <img
                 src="https://dms.medbarnagency.com/images/assets/icon@user.svg"
                 alt="users"
@@ -82,7 +106,7 @@
             <button
               class="ui-icon-animate btn-link"
               title="Logout"
-              style="border: none; width: 100%; text-align: left; outline: none; padding: 0.45rem 1rem;"
+              style="border: none; width: 100%; text-align: center; outline: none; padding: 0.45rem 1rem;"
             >
               <img
                 src="https://dms.medbarnagency.com/images/assets/logout.png"
@@ -108,6 +132,26 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../design/";
+.ui-sidebar-primary {
+  position: relative;
+  display: inline-block;
+  width: 100% !important;
+  height: 100%;
+  vertical-align: top;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.ui-sidebar-primary-body {
+  width: 100%;
+  display: block;
+  padding-top: 2.85rem;
+  position: absolute;
+  bottom: 10px;
+  top: 190px;
+  overflow: scroll;
+  height: 500px;
+}
 </style>

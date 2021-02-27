@@ -183,8 +183,8 @@
   width: 100%;
   display: block;
   padding-top: 2.85rem;
-  /* position: absolute; */
-  /* bottom: 0; */
+  position: absolute;
+  bottom: 0;
   overflow: scroll;
   height: 500px;
 }
@@ -226,6 +226,10 @@
   background-color: #6fa1d6 !important;
 }
 
+.brand-orange {
+  color: #f68140 !important;
+}
+
 .fs-14 {
   font-size: 14px;
 }
@@ -237,9 +241,9 @@
 .ui-sidebar-primary.ssbar--open .ui-sidebar-primary-links {
   text-align: left;
 }
-/* .ui-sidebar-primary.ssbar--open .ui-sidebar-primary-links li{
-    padding: 0 0.5rem;
-} */
+.ui-sidebar-primary.ssbar--open .ui-sidebar-primary-links li {
+  padding: 0 0.5rem;
+}
 .ui-sidebar-primary.ssbar--open .ui-sidebar-primary-links .lnk--text {
   display: inline-block;
 }
@@ -371,26 +375,6 @@
   padding-top: 5.9rem;
   height: 100%;
   overflow-y: scroll;
-}
-
-.ui-sidebar-secondary-body::-webkit-scrollbar {
-  width: 4px;
-  display: none;
-}
-
-/*!* Track *!*/
-.ui-sidebar-body::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/*!* Handle *!*/
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/*!* Handle on hover *!*/
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 
 .ui-dp {

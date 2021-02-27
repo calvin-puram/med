@@ -20,3 +20,31 @@ textarea:focus {
   border: 1px solid #06dca9 !important;
   outline: none !important;
 }
+
+.ui-sidebar-primary-body::-webkit-scrollbar {
+  width: 2px;
+}
+
+.ui-sidebar-primary-body::-webkit-scrollbar-thumb {
+  background: #06dca9 !important;
+  border-radius: 12px;
+}
+
+.ui-sidebar-primary-body::-webkit-scrollbar-thumb:hover {
+  background: #06dca9 !important;
+}
+
+@media (max-width: 576px) {
+  .ui-sidebar-primary-body::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .ui-sidebar-primary-body::-webkit-scrollbar-thumb {
+    background: #06dca9 !important;
+    border-radius: 6px;
+  }
+
+  .ui-sidebar-primary-body::-webkit-scrollbar-thumb:hover {
+    background: #06dca9 !important;
+  }
+}
