@@ -2,7 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import { router } from "./router";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import store from "./store";
+import { BootstrapVue } from "bootstrap-vue";
+import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
@@ -35,7 +36,10 @@ requireComponent.keys().forEach((fileName) => {
   );
 });
 
+Vue.use(BootstrapVue);
+
 new Vue({
   router,
+  store,
   render: (h) => h(App),
 }).$mount("#app");

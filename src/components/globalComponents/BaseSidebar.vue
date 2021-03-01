@@ -1,4 +1,4 @@
-]<template>
+<template>
   <section class="ui-sidebar ssbar--open ">
     <div class="ui-sidebar-primary ssbar--open">
       <div class="ui-sidebar-primary-header ui-text-center">
@@ -12,18 +12,6 @@
           </p>
           <span class=" brand-green">Profile</span></router-link
         >
-        <!-- <div class="pdr1 d-sm-none">
-          <div class="hmb--btn but1">
-            <span class=" fs-20 onsilverlight ui-hide-mobile-only"
-              ><i class="fas fa-bars"></i
-            ></span>
-          </div>
-          <div class="hmm--btn but2">
-            <span class=" fs-20 brand-lendlot-blue ui-show-mobile-only"
-              ><i class="fas fa-bars"></i
-            ></span>
-          </div>
-        </div> -->
       </div>
       <div class="ui-sidebar-primary-body ">
         <ul class="ui-sidebar-primary-links">
@@ -120,7 +108,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../design/";
+@import "../../design/";
 @media screen and (max-width: 1024px) {
   .ui-sidebar-primary-body {
     top: 190px;

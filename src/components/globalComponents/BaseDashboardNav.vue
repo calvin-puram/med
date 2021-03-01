@@ -2,8 +2,8 @@
   <div class="ui-topbar">
     <div class="ui-topbar-inner">
       <div class="d-flex align-items-center">
-        <div class="pr-1 click" @click="toogleMenu">
-          <div class="hmb--btn but1">
+        <div class="pr-1 click">
+          <div class="hmb--btn but1" @click="toogleMenu">
             <i
               class="fas fa-bars mr-5 onsilverlight fs-20 mt-2 ui-hide-mobile-only "
             ></i>
@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  components: {},
   props: {
     title: {
       type: String,
@@ -41,8 +42,8 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-@import "../design/";
+<style lang="scss" scoped>
+@import "../../design/";
 
 .click {
   cursor: pointer;

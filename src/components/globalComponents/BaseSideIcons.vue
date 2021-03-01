@@ -13,7 +13,7 @@
           </p>
           <span class=" brand-green">Profile</span></router-link
         >
-        <div class="pdr1 d-sm-none">
+        <div class="pr-1 d-sm-none">
           <div class="hmb--btn but1">
             <span class=" fs-20 onsilverlight ui-hide-mobile-only"
               ><i class="fas fa-bars"></i
@@ -133,7 +133,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../design/";
+@import "../../design/";
 .ui-sidebar-primary {
   position: relative;
   display: inline-block;

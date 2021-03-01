@@ -2,6 +2,95 @@
 @import "fonts";
 @import "utillities";
 @import "dashboard";
+@import "auth/form";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-body-bg;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-text;
+  text-align: left;
+}
+
+#nprogress .bar {
+  background: $bg-brand-green;
+}
+
+// globals
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-brand-green {
+  background-color: $bg-brand-green;
+}
+
+.ui-rounded-small {
+  border-radius: 0.5em;
+}
+
+.ui-text-left {
+  text-align: left;
+}
+
+.back__btn {
+  position: relative;
+  top: 0px;
+}
+
+.auth--brand .back__btnText a {
+  color: #35999e !important;
+}
+
+.auth--brand img {
+  width: 15px;
+  marging-right: 0.5rem;
+}
+
+.brand-dgreen,
+.brand-dgreen button {
+  color: $brand-dgreen !important;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+}
+.brand-dgreen,
+.brand-dgreen a {
+  color: $brand-dgreen !important;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-16 {
+  font-size: 16px !important;
+}
+
+.brand-dblue,
+.brand-dblue a {
+  color: $brand-dblue !important;
+}
+
+.onwhite,
+.onwhite a {
+  color: onwhite !important;
+}
+
+.ui-text-center {
+  text-align: center;
+}
 
 .ui-avatar-large {
   width: 120px;
