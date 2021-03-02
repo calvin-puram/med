@@ -1,18 +1,8 @@
 <template>
   <div>
     <router-link
-      v-if="others"
       :to="link"
       class="btn btn-block onwhite mb-4"
-      :style="{ background: color, borderColor: color }"
-    >
-      {{ text }}
-    </router-link>
-
-    <router-link
-      v-else
-      :to="link"
-      class="btn  onwhite mb-4"
       :style="{ background: color, borderColor: color }"
     >
       {{ text }}
@@ -44,5 +34,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../design/";
+// @import "../../design/";
 </style>

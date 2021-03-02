@@ -22,7 +22,7 @@
                     <div
                       class="d-flex align-items-center justify-content-between mb-2"
                     >
-                      <p class=" brand-dgreen fs-20 mb-0 ">
+                      <p class=" brand-dgreen  mb-0 ">
                         Create a donor/surrogate account
                       </p>
 
@@ -43,6 +43,58 @@
                       <span class="d-block"> proceeding to sign up</span>
                     </small>
                   </div>
+
+                  <form class="">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="first-name" class="fs-14  brand-dblue"
+                            >First name</label
+                          >
+
+                          <input
+                            type="text"
+                            class="form-control "
+                            placeholder="e.g. John"
+                            id="first-name"
+                            required=""
+                            value=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="fs-14  brand-dblue">Last name</label>
+                          <input
+                            type="text"
+                            class="form-control "
+                            placeholder="e.g. Doe"
+                            id="last-name"
+                            required=""
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="fs-14  brand-dblue">NIN number</label>
+                          <input
+                            type="number"
+                            class="form-control "
+                            placeholder="Enter your NIMC number here"
+                            id="address"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <BaseDonorBtn title="PROCEED"/>
+                  </form>
 
                   <div class="ui-text-center mt-2 mb-2">
                     Don't have an account?
@@ -77,5 +129,12 @@ export default {
 
 .donor__textcolor {
   color: #35a6c7;
+
+  @media (max-width: 789px) {
+    .form--white .d-flex {
+      display: flex !important ;
+      text-align: left !important;
+    }
+  }
 }
 </style>

@@ -231,7 +231,6 @@ export default {
   @include ui-full-bg-norm("../assets/img/authbg.svg");
 }
 
-
 .frm--cstm.auth .btn {
   width: 100%;
   height: 50px;

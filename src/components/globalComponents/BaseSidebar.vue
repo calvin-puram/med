@@ -24,24 +24,30 @@
             </router-link>
           </li>
           <li>
-            <a
+            <router-link
               class="ui-icon-animate"
               title="Requests"
-              href="/clinic/requests"
-              style="padding-top: 15px; padding-bottom: 15px;"
+              to="/clinic/requests"
               ><img
                 src="https://dms.medbarnagency.com/images/assets/requests.svg"
                 alt="requests"
                 style="width: 20px; margin-right: 13px; margin-left: 13px;"
-              /><span class="lnk--text brand-dblue  fs-16">Requests</span></a
+              /><span class="lnk--text brand-dblue  fs-16"
+                >Requests</span
+              ></router-link
             >
           </li>
           <li>
-            <a class="ui-icon-animate" title="Visits" href="/clinic/donors"
+            <router-link
+              class="ui-icon-animate"
+              title="Visits"
+              to="/clinic/donors"
               ><img
                 src="https://dms.medbarnagency.com/images/assets/icon@donor.svg"
                 alt="visits"
-              /><span class="lnk--text brand-dblue  fs-16">Visits</span></a
+              /><span class="lnk--text brand-dblue  fs-16"
+                >Visits</span
+              ></router-link
             >
           </li>
           <li>

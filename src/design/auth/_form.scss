@@ -97,3 +97,40 @@ label {
   width: 100%;
   height: 50px;
 }
+
+@media (max-width: 789px) {
+  .form--white .bg-white {
+    padding: 1rem 1rem;
+  }
+
+  .form--white .mrgt3 {
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-space {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .form--white .btn {
+    width: 100%;
+  }
+
+  .form--white .d-flex {
+    display: block;
+    // text-align: center;
+  }
+
+  .ui__wrapper-large {
+    min-height: 100vh;
+  }
+
+  .ml-auto {
+    margin-left: 0;
+  }
+
+  .frm--cstm.auth .btn {
+    margin-top: 0.9rem;
+  }
+}

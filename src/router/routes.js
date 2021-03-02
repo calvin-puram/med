@@ -9,6 +9,10 @@ import ClinicAddUser from "@/Views/clinic/AddUser";
 import Messages from "@/Views/clinic/Messages";
 import AddMessage from "@/Views/clinic/AddMessage";
 import Profile from "@/Views/clinic/Profile";
+import Request from "@/Views/clinic/Request";
+import Visits from "@/Views/clinic/Visits";
+import FullSearch from "@/Views/clinic/FullSearch";
+import AvailableDonors from "@/Views/clinic/AvailableDonors";
 
 import Donor_step1 from "@/Views/donor/Donor_step1";
 import Donor_step2 from "@/Views/donor/Donor_step2";
@@ -68,6 +72,26 @@ export default [
     name: "Profile",
     path: "/clinic/profile",
     component: Profile,
+  },
+  {
+    name: "Request",
+    path: "/clinic/requests",
+    component: Request,
+  },
+  {
+    name: "Visits",
+    path: "/clinic/donors",
+    component: Visits,
+  },
+  {
+    name: "FullSearch",
+    path: "/clinic/full-search",
+    component: FullSearch,
+  },
+  {
+    name: "AvailableDonors",
+    path: "/clinic/free",
+    component: AvailableDonors,
   },
 
   {

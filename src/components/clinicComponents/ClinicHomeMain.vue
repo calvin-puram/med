@@ -15,30 +15,35 @@
           <section class="ui-body-content">
             <div class="ui-body-content-inner">
               <div class="ui-separate"></div>
-              <div class="row spec--bx">
-                <div class="col-md-8 text-right">
-                  <BaseDashboardTabs
-                    color="rgb(247, 105, 72)"
-                    text="Search all donors"
-                    link="/clinic/full-search"
-                  />
+              <div class="row ">
+                <div class="col-md-6"></div>
+                <div class="col-md-6 ">
+                  <div class="row mr-0 ml-0">
+                    <div class="mr-3">
+                      <BaseDashboardTabs
+                        color="rgb(247, 105, 72)"
+                        text="Search all donors"
+                        link="/clinic/full-search"
+                      />
+                    </div>
+                    <div class="mr-3">
+                      <BaseDashboardTabs
+                        color=" #06dca9"
+                        text="Add User"
+                        link="/clinic/add-user"
+                      />
+                    </div>
+                    <div class="mr-0">
+                      <BaseDashboardTabs
+                        color=" #082c77"
+                        text="Messages"
+                        link="/clinic/tips"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div class="col-6 col-md-2 text-right">
-                  <BaseDashboardTabs
-                    color=" #06dca9"
-                    text="Add User"
-                    others="btn-block"
-                    link="/clinic/add-user"
-                  />
-                </div>
-                <div class="col-6 col-md-2 text-right">
-                  <BaseDashboardTabs
-                    color=" #082c77"
-                    text="Messages"
-                    others="btn-block"
-                    link="/clinic/tips"
-                  />
-                </div>
+              </div>
+              <div class="row">
                 <div class="col-md-6">
                   <div class="ui-dashboard-card">
                     <div
@@ -81,6 +86,7 @@
                   </div>
                 </div>
               </div>
+
               <!-- ui card -->
               <section class="mt-2">
                 <div class="ui-dashboard-card">
@@ -158,14 +164,14 @@ export default {
 
 @media screen and (max-width: 768px) {
   .ui-dashboard-card-header {
-    display: block;
+    display: block !important;
     .ui-card-title {
-      margin-bottom: 1rem;
+      margin-bottom: 1rem !important;
     }
   }
 
   .ui-dashboard-body.sdbr--open {
-    padding-left: 0px;
+    padding-left: 0px !important;
   }
 
   .frm--card .ctrl--fnd {
@@ -177,9 +183,6 @@ export default {
   }
   .onlyMobile {
     display: block !important;
-  }
-  .onlyDesktop {
-    display: none;
   }
 }
 </style>
