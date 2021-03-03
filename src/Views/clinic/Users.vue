@@ -1,18 +1,17 @@
 <template>
   <div class="dashboard">
     <BaseClinicSidebar />
-
-    <MessagesMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
+    <UserMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import MessagesMain from "@/components/clinicComponents/MessagesMain";
+import UserMain from "@/components/clinicComponents/UsersMain";
 export default {
   computed: mapGetters(["menuIcons"]),
   components: {
-    MessagesMain,
+    UserMain,
   },
 
   methods: {
@@ -21,4 +20,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

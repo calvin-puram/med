@@ -1,20 +1,18 @@
 <template>
   <div class="dashboard">
-    <BaseClinicSidebar />
-
-    <MessagesMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
+    <BaseDonorSidebar showProfile="agent" />
+    <ProfileMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import MessagesMain from "@/components/clinicComponents/MessagesMain";
+import ProfileMain from "@/components/donorComponents/ProfileMain";
 export default {
   computed: mapGetters(["menuIcons"]),
   components: {
-    MessagesMain,
+    ProfileMain,
   },
-
   methods: {
     ...mapActions(["toogleMenu"]),
   },

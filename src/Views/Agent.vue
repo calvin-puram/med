@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-8 mx-auto">
           <div class="ui-wrapper">
-            <div class="frm--white frm--cstm auth signin-form">
+            <div class="frm--white frm--cstm auth signin-form was-validated">
               <div class="form-space">
                 <div class="bg-white ui-rounded-small">
                   <div>

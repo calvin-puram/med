@@ -1,14 +1,6 @@
 <template>
   <div class="dashboard">
-    <BaseSidebar home="/clinic/home" v-if="!menuIcons" class="hideMobile" />
-
-    <BaseSideIcons home="/clinic/home" v-else class="hideMobile" />
-    <BaseSidebarMobile
-      v-if="menuIcons"
-      :toogleMenu="toogleMenu"
-      home="/clinic/home"
-      class="d-none mobileNav"
-    />
+    <BaseClinicSidebar />
 
     <AvailableDonorsMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
   </div>
@@ -29,15 +21,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "../../design/";
-@media (max-width: 768px) {
-  .hideMobile {
-    display: none !important;
-  }
-
-  .mobileNav {
-    display: block !important;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

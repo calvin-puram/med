@@ -2,7 +2,7 @@
   <div>
     <router-link
       :to="link"
-      class="btn btn-block onwhite mb-4"
+      class="btn btn-block btn--sm onwhite mb-4"
       :style="{ background: color, borderColor: color }"
     >
       {{ text }}

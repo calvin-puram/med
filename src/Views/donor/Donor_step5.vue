@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-8 col-lg-6 mx-auto">
           <div class="ui-wrapper">
-            <form class="form--white frm--cstm auth">
+            <form class="form--white frm--cstm auth was-validated">
               <div class="">
                 <div class="bg-white ui-rounded-small">
                   <div class="ui-text-left auth--brand mb-5 pt-1">

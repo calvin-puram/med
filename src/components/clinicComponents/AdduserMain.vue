@@ -92,7 +92,7 @@
                               <div class="ml-auto">
                                 <button
                                   type="submit"
-                                  class="btn bg-brand-green onwhite  btn-sm"
+                                  class="btn bg-brand-green onwhite  btn--sm"
                                 >
                                   ADD USER
                                 </button>

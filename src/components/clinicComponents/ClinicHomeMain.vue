@@ -19,21 +19,21 @@
                 <div class="col-md-6"></div>
                 <div class="col-md-6 ">
                   <div class="row mr-0 ml-0">
-                    <div class="mr-3">
+                    <div class="col-md-4">
                       <BaseDashboardTabs
                         color="rgb(247, 105, 72)"
                         text="Search all donors"
                         link="/clinic/full-search"
                       />
                     </div>
-                    <div class="mr-3">
+                    <div class="col-md-4">
                       <BaseDashboardTabs
                         color=" #06dca9"
                         text="Add User"
                         link="/clinic/add-user"
                       />
                     </div>
-                    <div class="mr-0">
+                    <div class="col-md-4">
                       <BaseDashboardTabs
                         color=" #082c77"
                         text="Messages"

@@ -19,7 +19,7 @@
                 <div class="ui-header-options">
                   <div class="ui-group-button">
                     <router-link
-                      to="/clinic/home"
+                      to="/agent/donors"
                       class="btn btn--sm bg-brand-bluemd onwhite"
                     >
                       Back

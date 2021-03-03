@@ -40,7 +40,9 @@
                           class="d-flex align-items-center justify-content-between advance__search-mobile"
                         >
                           <h6>Advance search</h6>
-                          <button class="btn btn-primary onwhite btn__small  ">
+                          <button
+                            class="btn btn-primary onwhite btn--sm btn__small "
+                          >
                             Refresh Form
                           </button>
                         </div>

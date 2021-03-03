@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-md-8 col-lg-6 mx-auto">
             <div class="login__ui-wrapper">
-              <form class="login__form--white frm--cstm auth">
+              <form class="login__form--white frm--cstm auth was-validated">
                 <div class="login__form-space">
                   <div class="bg-white ui-rounded-small">
                     <div class="ui-text-left auth--brand mrgb3 pdt1">

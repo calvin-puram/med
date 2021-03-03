@@ -35,7 +35,7 @@
                     <div class="mr-0">
                       <router-link
                         to="/clinic/home"
-                        class="btn btn--xs bg-brand-bluemd onwhite "
+                        class="btn btn--sm bg-brand-bluemd onwhite "
                       >
                         Back
                       </router-link>

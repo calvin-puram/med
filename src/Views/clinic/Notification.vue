@@ -2,17 +2,17 @@
   <div class="dashboard">
     <BaseClinicSidebar />
 
-    <MessagesMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
+    <NotificationMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import MessagesMain from "@/components/clinicComponents/MessagesMain";
+import NotificationMain from "@/components/clinicComponents/NotificationMain";
 export default {
   computed: mapGetters(["menuIcons"]),
   components: {
-    MessagesMain,
+    NotificationMain,
   },
 
   methods: {

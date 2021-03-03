@@ -5,35 +5,89 @@
         <div class="mobileHambuger" @click="toogleMenu">
           <i class="fas fa-bars  onsilverlight fs-20 mt-2  "></i>
         </div>
+        <!-- check for profile -->
         <router-link
+          v-if="showProfile === 'agent'"
+          to="/agent/profile"
           @click="toogleMenu"
-          to="/clinic/profile"
           class="ui-sidebar-primary-logo"
           ><img
             src="https://dms.medbarnagency.com/images/assets/icon@logo-c.svg"
             alt="Logo"
+            width="50px"
+          />
+          <p class="brand-dblue  fs-15 mt-1 mb-0">
+            James Mark
+          </p>
+        </router-link>
+        <router-link
+          v-else-if="showProfile === 'donor'"
+          @click="toogleMenu"
+          to="/donor/profile"
+          class="ui-sidebar-primary-logo"
+          ><img
+            src="https://dms.medbarnagency.com/images/assets/icon@logo-c.svg"
+            alt="Logo"
+            width="50px"
+          />
+          <p class="brand-dblue  fs-15 mt-1 mb-0">
+            James Mark
+          </p>
+        </router-link>
+        <router-link
+          v-else
+          to="/clinic/profile"
+          @click="toogleMenu"
+          class="ui-sidebar-primary-logo"
+          ><img
+            src="https://dms.medbarnagency.com/images/assets/icon@logo-c.svg"
+            alt="Logo"
+            width="50px"
           />
           <p class="brand-dblue  fs-15 mt-1 mb-0">
             metro
           </p>
           <span class=" brand-green">Profile</span></router-link
         >
+        <!-- end check for profile -->
       </div>
       <div class="ui-sidebar-primary-body ">
-        <ul class="ui-sidebar-primary-links">
-          <li @click="toogleMenu">
-            <router-link :to="home" class="ui-icon-animate side-active">
+        <ul
+          class="ui-sidebar-primary-links"
+          v-for="Icons in sidebarIcons"
+          :key="Icons.title"
+        >
+          <li @click="toogleMenu" v-if="Icons.title === 'Home'">
+            <router-link :to="Icons.to" class="ui-icon-animate side-active">
               <img
                 src="https://dms.medbarnagency.com/images/assets/icon@home.svg"
                 alt="home"
               /><span class="lnk--text brand-dblue  fs-16">Home</span>
             </router-link>
           </li>
-          <li @click="toogleMenu">
-            <router-link
-              class="ui-icon-animate"
-              title="Requests"
-              to="/clinic/requests"
+          <!-- agent -->
+          <li @click="toogleMenu" v-if="Icons.title === 'Donors'">
+            <router-link :to="Icons.to" class="ui-icon-animate side-active">
+              <img
+                src="https://dms.medbarnagency.com/images/assets/icon@donor.svg"
+                alt="home"
+              /><span class="lnk--text brand-dblue  fs-16">Donors</span>
+            </router-link>
+          </li>
+          <li @click="toogleMenu" v-if="Icons.title === 'AgentNoti'">
+            <router-link :to="Icons.to" class="ui-icon-animate side-active">
+              <img
+                src="https://dms.medbarnagency.com/images/assets/icon@bell.svg"
+                alt="home"
+              /><span class="lnk--text brand-dblue  fs-16">Notifications</span
+              ><span class="lnk--text brand-orange ui-pull-right ml-3  fs-14"
+                >1</span
+              >
+            </router-link>
+          </li>
+          <!-- end agent -->
+          <li @click="toogleMenu" v-if="Icons.title === 'Requests'">
+            <router-link class="ui-icon-animate" title="Requests" :to="Icons.to"
               ><img
                 src="https://dms.medbarnagency.com/images/assets/requests.svg"
                 alt="requests"
@@ -43,11 +97,8 @@
               ></router-link
             >
           </li>
-          <li @click="toogleMenu">
-            <router-link
-              class="ui-icon-animate"
-              title="Visits"
-              to="/clinic/donors"
+          <li @click="toogleMenu" v-if="Icons.title === 'Visits'">
+            <router-link class="ui-icon-animate" title="Visits" :to="Icons.to"
               ><img
                 src="https://dms.medbarnagency.com/images/assets/icon@donor.svg"
                 alt="visits"
@@ -56,11 +107,11 @@
               ></router-link
             >
           </li>
-          <li @click="toogleMenu">
+          <li @click="toogleMenu" v-if="Icons.title === 'Transactions'">
             <router-link
               class="ui-icon-animate"
               title="Transactions"
-              to="/clinic/transactions"
+              :to="Icons.to"
               ><img
                 src="https://dms.medbarnagency.com/images/assets/icon@card.svg"
                 alt="transactions"
@@ -69,25 +120,22 @@
               ></router-link
             >
           </li>
-          <li @click="toogleMenu">
+          <li @click="toogleMenu" v-if="Icons.title === 'Notifications'">
             <router-link
               class="ui-icon-animate"
               title="Notifications"
-              to="/clinic/notifications"
+              :to="Icons.to"
               ><img
                 src="https://dms.medbarnagency.com/images/assets/icon@bell.svg"
                 alt="notifications"
               /><span class="lnk--text brand-dblue  fs-16">Notifications</span
               ><span class="lnk--text brand-orange ui-pull-right ml-3  fs-14"
-                >0</span
+                >1</span
               ></router-link
             >
           </li>
-          <li>
-            <router-link
-              class="ui-icon-animate"
-              title="Users"
-              to="/clinic/users"
+          <li v-if="Icons.title === 'Users'">
+            <router-link class="ui-icon-animate" title="Users" :to="Icons.to"
               ><img
                 src="https://dms.medbarnagency.com/images/assets/icon@user.svg"
                 alt="users"
@@ -96,7 +144,7 @@
               ></router-link
             >
           </li>
-          <li style="cursor: pointer;">
+          <li style="cursor: pointer;" v-if="Icons.title === 'Logout'">
             <button
               class="ui-icon-animate btn-link"
               title="Logout"
@@ -117,13 +165,17 @@
 <script>
 export default {
   props: {
-    home: {
-      type: String,
-      required: false,
+    sidebarIcons: {
+      type: Array,
+      required: true,
     },
     toogleMenu: {
       type: Function,
       required: true,
+    },
+    showProfile: {
+      type: String,
+      required: false,
     },
   },
 };

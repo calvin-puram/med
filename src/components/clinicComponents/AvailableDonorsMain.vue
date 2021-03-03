@@ -231,11 +231,9 @@
                   <div class="ui-dashboard-card-footer">
                     <div class="ui-group-button npv--btn">
                       <button class="fs-14" disabled="">
-                        <span
-                          class="fas fa-chevron-left onwhite"
-                        ></span></button
+                        <i class="fas fa-chevron-left onwhite"></i></button
                       ><button class="fs-14">
-                        <span class="fas fa-chevron-right onwhite"></span>
+                        <i class="fas fa-chevron-right onwhite"></i>
                       </button>
                     </div>
                     <div class="ui-card-footer-options">
