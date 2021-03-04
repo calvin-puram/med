@@ -1,17 +1,17 @@
 <template>
   <div class="dashboard">
-    <BaseDonorSidebar />
-    <DonorHomeMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
+    <BaseAdminSidebar />
+    <AdminAddDonorMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import DonorHomeMain from "@/components/donorComponents/DonorHomeMain";
+import AdminAddDonorMain from "@/components/adminComponents/AdminAddDonorMain";
 export default {
   computed: mapGetters(["menuIcons"]),
   components: {
-    DonorHomeMain,
+    AdminAddDonorMain,
   },
   methods: {
     ...mapActions(["toogleMenu"]),

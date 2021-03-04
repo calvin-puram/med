@@ -4,12 +4,12 @@
       :sidebarIcons="sidebarIcons"
       v-if="!menuIcons"
       class="hideMobile"
-      :showProfile="showProfile"
+      showProfile="/donor/profile"
     />
 
     <BaseSideIcons
       :sidebarIcons="sidebarIcons"
-      :showProfile="showProfile"
+      showProfile="/donor/profile"
       v-else
       class="hideMobile"
     />
@@ -17,7 +17,7 @@
       v-if="menuIcons"
       :toogleMenu="toogleMenu"
       :sidebarIcons="sidebarIcons"
-      :showProfile="showProfile"
+      showProfile="/donor/profile"
       class="d-none mobileNav"
     />
   </div>
@@ -27,12 +27,7 @@
 import { mapActions, mapGetters } from "vuex";
 export default {
   computed: mapGetters(["menuIcons"]),
-  props: {
-    showProfile: {
-      type: String,
-      required: false,
-    },
-  },
+
   data() {
     return {
       sidebarIcons: [

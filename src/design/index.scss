@@ -12,8 +12,9 @@
 
 body {
   background: $color-body-bg;
+  font-family: $body-font-family;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   color: $color-text;
   text-align: left;
@@ -29,6 +30,14 @@ body {
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.2rem;
+}
+.back__btn {
+  position: relative;
+  top: 0px;
+}
+
+.btn__small {
+  width: 200px !important;
 }
 
 .bg-white {
@@ -47,11 +56,6 @@ body {
   text-align: left;
 }
 
-.back__btn {
-  position: relative;
-  top: 0px;
-}
-
 .auth--brand .back__btnText a {
   color: #35999e !important;
 }
@@ -59,6 +63,38 @@ body {
 .auth--brand img {
   width: 15px;
   marging-right: 0.5rem;
+}
+
+.bg-box-blue {
+  background-color: $bg-box-blue;
+}
+.bg-box-teal {
+  background-color: $bg-box-teal;
+}
+.bg-box-yellow {
+  background-color: $bg-box-yellow;
+}
+.bg-box-orange {
+  background-color: $bg-box-orange;
+}
+
+.bg-box-orange .h1 {
+  color: $text-box-blue;
+}
+.bg-box-teal .h1 {
+  color: $text-box-teal;
+}
+.bg-box-yellow .h1 {
+  color: $text-box-yellow;
+}
+.bg-box-orange .h1 {
+  color: $text-box-orange;
+}
+
+.text__h5 {
+  color: $section-heading;
+  font-family: $body-font-family;
+  font-weight: 400;
 }
 
 .brand-dgreen,

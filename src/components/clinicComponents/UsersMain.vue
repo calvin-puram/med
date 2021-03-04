@@ -116,7 +116,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../design";
 .body {
   background: #f5f8fd;
@@ -155,8 +155,6 @@ export default {
 .ui-full-bg-norm {
   @include ui-full-bg-norm("../../assets/img/fullsearchimg.svg");
 }
-
-
 
 @media screen and (max-width: 768px) {
   .ui-dashboard-card-header {

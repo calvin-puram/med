@@ -4,20 +4,20 @@
       :sidebarIcons="sidebarIcons"
       v-if="!menuIcons"
       class="hideMobile"
-      showProfile="/clinic/profile"
+      showProfile="/provider/profile"
     />
 
     <BaseSideIcons
       :sidebarIcons="sidebarIcons"
       v-else
       class="hideMobile"
-      showProfile="/clinic/profile"
+      showProfile="/provider/profile"
     />
     <BaseSidebarMobile
       v-if="menuIcons"
       :toogleMenu="toogleMenu"
       :sidebarIcons="sidebarIcons"
-      showProfile="/clinic/profile"
+      showProfile="/provider/profile"
       class="d-none mobileNav"
     />
   </div>
@@ -31,36 +31,48 @@ export default {
     return {
       sidebarIcons: [
         {
-          to: "/clinic/home",
+          to: "/provider/home",
           title: "Home",
           img: "https://dms.medbarnagency.com/images/assets/icon@home.svg",
         },
         {
-          to: "/clinic/requests",
-          title: "Requests",
-          img: "https://dms.medbarnagency.com/images/assets/requests.svg",
-          width: "20px",
+          to: "/provider/clinics",
+          title: "Clinics",
+          img: "https://dms.medbarnagency.com/images/assets/icon@clinic.svg",
         },
         {
-          to: "/clinic/donors",
-          title: "Visits",
+          to: "/provider/donors",
+          title: "Donors",
           img: "https://dms.medbarnagency.com/images/assets/icon@donor.svg",
         },
         {
-          to: "/clinic/transactions",
+          to: "/provider/agents",
+          title: "Agents",
+          img: "https://dms.medbarnagency.com/images/assets/icon@agent-f.svg",
+        },
+        {
+          to: "/provider/enquiries",
+          title: "Feedbacks",
+          img: "https://dms.medbarnagency.com/images/assets/requests.svg",
+          width: "20px",
+        },
+
+        {
+          to: "/provider/transactions",
           title: "Transactions",
           img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
         },
         {
-          to: "/clinic/notifications",
+          to: "/provider/tips",
+          title: "Messages",
+          img: "https://dms.medbarnagency.com/images/assets/icon@tip.svg",
+        },
+        {
+          to: "/provider/notifications",
           title: "Notifications",
           img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
         },
-        {
-          to: "/clinic/users",
-          title: "Users",
-          img: "https://dms.medbarnagency.com/images/assets/icon@user.svg",
-        },
+
         {
           to: "logout",
           title: "Logout",

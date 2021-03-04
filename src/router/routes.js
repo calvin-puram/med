@@ -27,6 +27,19 @@ import AgentNotification from "@/Views/donor/AgentNotification";
 import AgentProfile from "@/Views/donor/Profile";
 import AddDonor from "@/Views/donor/AddDonor";
 
+import AdminDashboard from "@/Views/admin/AdminDashboard";
+import AdminAddClinic from "@/Views/admin/AdminAddClinic";
+import Clinics from "@/Views/admin/Clinics";
+import Donors from "@/Views/admin/Donors";
+import AdminAddDonor from "@/Views/admin/AdminAddDonor";
+import Agents from "@/Views/admin/Agents";
+import Feedbacks from "@/Views/admin/Feedbacks";
+import Transactions from "@/Views/admin/Transactions";
+import AdminMessages from "@/Views/admin/Messages";
+import AdminAddMessage from "@/Views/admin/AdminAddMessage";
+import AdminNotifications from "@/Views/admin/Notification";
+import AdminProfile from "@/Views/admin/Profile";
+
 export default [
   {
     name: "home",
@@ -160,5 +173,66 @@ export default [
     name: "AddDonor",
     path: "/agent/add-donor",
     component: AddDonor,
+  },
+  // ADMIN ROUTES
+  {
+    name: "AdminDashboard",
+    path: "/provider/home",
+    component: AdminDashboard,
+  },
+  {
+    name: "AdminAddClinic",
+    path: "/provider/clinics/add",
+    component: AdminAddClinic,
+  },
+  {
+    name: "AdminClinics",
+    path: "/provider/clinics",
+    component: Clinics,
+  },
+  {
+    name: "AdminDonors",
+    path: "/provider/donors",
+    component: Donors,
+  },
+  {
+    name: "AdminAddDonor",
+    path: "/provider/donors/add",
+    component: AdminAddDonor,
+  },
+  {
+    name: "Agents",
+    path: "/provider/agents",
+    component: Agents,
+  },
+  {
+    name: "Feedbacks",
+    path: "/provider/enquiries",
+    component: Feedbacks,
+  },
+  {
+    name: "AdminTransactions",
+    path: "/provider/transactions",
+    component: Transactions,
+  },
+  {
+    name: "AdminMessages",
+    path: "/provider/tips",
+    component: AdminMessages,
+  },
+  {
+    name: "AdminAddMessage",
+    path: "/provider/tips/add",
+    component: AdminAddMessage,
+  },
+  {
+    name: "AdminNotifications",
+    path: "/provider/notifications",
+    component: AdminNotifications,
+  },
+  {
+    name: "AdminProfile",
+    path: "/provider/profile",
+    component: AdminProfile,
   },
 ];

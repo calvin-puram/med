@@ -32,7 +32,7 @@
                       <div class="ui-group-button d-flex align-items-center">
                         <div class="ui-group-button pl-1">
                           <router-link
-                            to="/clinic/tips/add"
+                            to="/provider/tips/add"
                             class="btn btn--sm bg-brand-green onwhite "
                             >Add Message</router-link
                           >

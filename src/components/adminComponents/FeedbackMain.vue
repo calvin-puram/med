@@ -8,13 +8,26 @@
       <div>
         <div class="body">
           <BaseDashboardNav
-            title="Messages"
+            title="Feedbacks "
             :menuIcons="menuIcons"
             :toogleMenu="toogleMenu"
           />
+
           <section class="ui-body-content">
             <div class="ui-body-content-inner">
-              <div class="ui-separate"></div>
+              <div class="ui-separate-small"></div>
+              <div class="ui-content-header">
+                <div class="ui-header-options">
+                  <div class="ui-group-button">
+                    <router-link
+                      to="/provider/agents"
+                      class="btn btn--sm bg-brand-bluemd onwhite "
+                    >
+                      Back
+                    </router-link>
+                  </div>
+                </div>
+              </div>
               <section class="mt-2">
                 <div class="ui-dashboard-card">
                   <div class="ui-dashboard-card-header">
@@ -22,31 +35,19 @@
                       <form class="d-flex align-items-center frm--card">
                         <input
                           type="text"
-                          placeholder="Find message by title"
+                          placeholder="Find by name"
                           class=" form-control ctrl--fnd"
                           id="searchRef"
                         />
                       </form>
                     </div>
-                    <div class="ui-card-header-options">
-                      <div class="ui-group-button d-flex align-items-center">
-                        <div class="ui-group-button pl-1">
-                          <router-link
-                            to="/clinic/tips/add"
-                            class="btn btn--sm bg-brand-green onwhite "
-                            >Add Message</router-link
-                          >
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                  <div class="ui-dashboard-card-body">
-                    <div class="text-center">
+                  <div class="ui-dashboard-card">
+                    <div class="ui-dashboard-card-body">
                       <h5 class="text__h5">
-                        You currrently have no scheduled messages
+                        Requests from donors will show here
                       </h5>
                     </div>
-                    <div class="table-responsive"></div>
                   </div>
                 </div>
               </section>
@@ -59,9 +60,9 @@
     </div>
   </main>
 </template>
+
 <script>
 export default {
-  components: {},
   props: {
     menuIcons: {
       type: Boolean,
@@ -77,10 +78,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../design";
 .body {
-  background: #f5f8fd;
-}
-.text__h5 {
-  color: rgb(51, 66, 97);
+  background: $color-body-bg;
 }
 
 @media screen and (max-width: 768px) {
@@ -88,13 +86,8 @@ export default {
     padding-left: 0px;
   }
 
-  .frm--card .ctrl--fnd {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .ui-dashboard-card-header {
-    display: block;
+  .ui-hide-mobile-only {
+    display: none;
   }
 }
 </style>

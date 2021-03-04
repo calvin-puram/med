@@ -74,8 +74,10 @@
                               </div>
                             </div>
                           </div>
-                          <div class="form-group mrgt3">
-                            <button class="btn btn--sm btn__small bg-brand-green onwhite ">
+                          <div class="form-group mt-3">
+                            <button
+                              class="btn btn--sm btn__small bg-brand-green onwhite "
+                            >
                               SAVE MESSAGE
                             </button>
                           </div>
