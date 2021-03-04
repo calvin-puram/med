@@ -4,20 +4,20 @@
       :sidebarIcons="sidebarIcons"
       v-if="!menuIcons"
       class="hideMobile"
-      showProfile="/profile"
+      showProfile="/agent/profile"
     />
 
     <BaseSideIcons
       :sidebarIcons="sidebarIcons"
+      showProfile="/agent/profile"
       v-else
       class="hideMobile"
-      showProfile="/profile"
     />
     <BaseSidebarMobile
       v-if="menuIcons"
       :toogleMenu="toogleMenu"
       :sidebarIcons="sidebarIcons"
-      showProfile="/profile"
+      showProfile="/agent/profile"
       class="d-none mobileNav"
     />
   </div>
@@ -27,40 +27,21 @@
 import { mapActions, mapGetters } from "vuex";
 export default {
   computed: mapGetters(["menuIcons"]),
+
   data() {
     return {
       sidebarIcons: [
         {
-          to: "/home",
-          title: "Home",
-          img: "https://dms.medbarnagency.com/images/assets/icon@home.svg",
+          to: "/agent/donors",
+          title: "Donors",
+          img: "https://dms.medbarnagency.com/images/assets/icon@donor.svg",
         },
         {
-          to: "/clinics",
-          title: "Clinics",
-          img: "https://dms.medbarnagency.com/images/assets/icon@clinic.svg",
-        },
-        {
-          to: "/requests",
-          title: "Requests",
-          img: "https://dms.medbarnagency.com/images/assets/requests.svg",
-          width: "20px",
-        },
-        {
-          to: "/provider",
-          title: "Provider",
-          img: "https://dms.medbarnagency.com/images/assets/icon@tip.svg",
-        },
-        {
-          to: "transactions",
-          title: "Transactions",
+          to: "/agent/notifications",
+          title: "AgentNoti",
           img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
         },
-        {
-          to: "/notifications",
-          title: "Notifications",
-          img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
-        },
+
         {
           to: "logout",
           title: "Logout",

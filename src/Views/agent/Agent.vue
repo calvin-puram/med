@@ -24,7 +24,7 @@
                         <div class="back__btnText  fs-16">
                           <span style="position: relative; top: 0px">
                             <img
-                              src="../assets/img/Intersection 1.svg"
+                              src="@/assets/img/Intersection 1.svg"
                               alt="back arrow"
                             />
                           </span>
@@ -226,9 +226,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../design";
+@import "../../design";
 .ui-full-bg-norm {
-  @include ui-full-bg-norm("../assets/img/authbg.svg");
+  @include ui-full-bg-norm("../../assets/img/authbg.svg");
 }
 
 .frm--cstm.auth .btn {

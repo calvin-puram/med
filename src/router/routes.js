@@ -1,8 +1,8 @@
 import Login from "@/Views/Login";
 import ForgotPassword from "@/Views/ForgotPassword";
 import Register from "@/Views/Register";
-import Agent from "@/Views/Agent";
 
+// CLINIC
 import ClinicDashboard from "@/Views/clinic/ClinicDashboard";
 import Clinic from "@/Views/clinic/Clinic";
 import ClinicAddUser from "@/Views/clinic/AddUser";
@@ -16,17 +16,24 @@ import AvailableDonors from "@/Views/clinic/AvailableDonors";
 import Transaction from "@/Views/clinic/Transaction";
 import Notification from "@/Views/clinic/Notification";
 import Users from "@/Views/clinic/Users";
-
+//DONOR
 import Donor_step1 from "@/Views/donor/Donor_step1";
 import Donor_step2 from "@/Views/donor/Donor_step2";
 import Donor_step3 from "@/Views/donor/Donor_step3";
 import Donor_step4 from "@/Views/donor/Donor_step4";
 import Donor_step5 from "@/Views/donor/Donor_step5";
-import DonorDashboard from "@/Views/donor/DonorDashboard";
-import AgentNotification from "@/Views/donor/AgentNotification";
-import AgentProfile from "@/Views/donor/Profile";
-import AddDonor from "@/Views/donor/AddDonor";
-
+import DonorDashboardMain from "@/Views/donor/DonorDashboard";
+import DonorClinics from "@/Views/donor/Clinics";
+import DonorRequests from "@/Views/donor/Requests";
+import DonorTransactions from "@/Views/donor/Transactions";
+import DonorNotifications from "@/Views/donor/Notifications";
+// AGENT
+import DonorDashboard from "@/Views/agent/DonorDashboard";
+import AgentNotification from "@/Views/agent/AgentNotification";
+import AgentProfile from "@/Views/agent/Profile";
+import AddDonor from "@/Views/agent/AddDonor";
+import Agent from "@/Views/agent/Agent";
+// ADMIN
 import AdminDashboard from "@/Views/admin/AdminDashboard";
 import AdminAddClinic from "@/Views/admin/AdminAddClinic";
 import Clinics from "@/Views/admin/Clinics";
@@ -154,6 +161,32 @@ export default [
     path: "/register/donor_step5",
     component: Donor_step5,
   },
+  {
+    name: "DonorDashboardMain",
+    path: "/home",
+    component: DonorDashboardMain,
+  },
+  {
+    name: "DonorClinics",
+    path: "/clinics",
+    component: DonorClinics,
+  },
+  {
+    name: "DonorRequests",
+    path: "/requests",
+    component: DonorRequests,
+  },
+  {
+    name: "DonorTransactions",
+    path: "/transactions",
+    component: DonorTransactions,
+  },
+  {
+    name: "DonorNotifications",
+    path: "/notifications",
+    component: DonorNotifications,
+  },
+  // AGENT
   {
     name: "DonorDashboard",
     path: "/agent/donors",

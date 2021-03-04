@@ -1,17 +1,17 @@
 <template>
   <div class="dashboard">
-    <BaseDonorSidebar showProfile="agent" />
-    <AddDonorMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
+    <BaseAgentSidebar />
+    <NotificationMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import AddDonorMain from "@/components/donorComponents/AddDonorMain";
+import NotificationMain from "@/components/agentComponents/NotificationMain";
 export default {
   computed: mapGetters(["menuIcons"]),
   components: {
-    AddDonorMain,
+    NotificationMain,
   },
   methods: {
     ...mapActions(["toogleMenu"]),
