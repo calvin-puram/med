@@ -304,7 +304,7 @@
 .ui-sidebar-primary-links li a .fe {
   font-size: 22px;
 }
-.router-link-active {
+.router-link-exact-active {
   background-color: #f1fefb !important;
 }
 .ui-sidebar-secondary {
@@ -1566,7 +1566,7 @@ table
   .custom-checkbox
   .custom-control-input:checked
   ~ .custom-control-label::before {
-  background-color: #06dca9;
+  background-color: #06dca9 !important;
   border-color: #06dca9;
 }
 table .custom-control-input:checked ~ .custom-control-label::before {

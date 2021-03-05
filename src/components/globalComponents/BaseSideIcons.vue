@@ -45,8 +45,9 @@
             >
               <img
                 :src="Icons.img"
-                alt="Icons.title"
-                :style="{ width: Icons.width ? Icons.width : '' }"
+                :alt="Icons.title"
+                width="20px"
+                height="20px"
               />
             </router-link>
           </li>

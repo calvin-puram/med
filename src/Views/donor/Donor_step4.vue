@@ -230,7 +230,7 @@
                       </div>
                     </div>
 
-                    <BaseDonorBtn title="PROCEED" />
+                    <BaseDonorBtn  />
 
                     <div class="ui-text-center mt-2 mb-2">
                       Don't have an account?

@@ -39,13 +39,13 @@ export default {
         {
           to: "/agent/notifications",
           title: "AgentNoti",
-          img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
+          img: "https://dms.medbarnagency.com/images/assets/icon@bell.svg",
         },
 
         {
           to: "logout",
           title: "Logout",
-          img: "https://dms.medbarnagency.com/images/assets/icon@user.svg",
+          img: "https://dms.medbarnagency.com/images/assets/logout.png",
         },
       ],
     };

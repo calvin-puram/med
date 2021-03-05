@@ -146,13 +146,6 @@ body {
   opacity: 1;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border: 1px solid #06dca9 !important;
-  outline: none !important;
-}
-
 .ui-sidebar-primary-body::-webkit-scrollbar {
   width: 2px;
 }

@@ -33,38 +33,37 @@ export default {
         {
           to: "/clinic/home",
           title: "Home",
-          img: "https://dms.medbarnagency.com/images/assets/icon@home.svg",
+          img: "/img/home.svg",
         },
         {
           to: "/clinic/requests",
           title: "Requests",
-          img: "https://dms.medbarnagency.com/images/assets/requests.svg",
-          width: "20px",
+          img: "/img/message.svg",
         },
         {
           to: "/clinic/donors",
           title: "Visits",
-          img: "https://dms.medbarnagency.com/images/assets/icon@donor.svg",
+          img: "/img/users.svg",
         },
         {
           to: "/clinic/transactions",
           title: "Transactions",
-          img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
+          img: "/img/credit-card.svg",
         },
         {
           to: "/clinic/notifications",
           title: "Notifications",
-          img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
+          img: "/img/bell.svg",
         },
         {
           to: "/clinic/users",
           title: "Users",
-          img: "https://dms.medbarnagency.com/images/assets/icon@user.svg",
+          img: "/img/user.svg",
         },
         {
           to: "logout",
           title: "Logout",
-          img: "https://dms.medbarnagency.com/images/assets/icon@user.svg",
+          img: "/img/log-out.svg",
         },
       ],
     };

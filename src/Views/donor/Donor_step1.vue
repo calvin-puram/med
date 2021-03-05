@@ -93,7 +93,7 @@
                       </div>
                     </div>
 
-                    <BaseDonorBtn title="PROCEED"/>
+                    <BaseDonorBtn />
                   </form>
 
                   <div class="ui-text-center mt-2 mb-2">

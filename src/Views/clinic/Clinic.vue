@@ -157,9 +157,10 @@
                         </div>
                       </div>
 
-                      <div class="form-group  mb-0">
+                      <div class="form-group  mb-0 mt-3">
                         <div class="mb-5 mb-sm-0">
-                          <label class="custom-control custom-checkbox "
+                          <label
+                            class="custom-control custom-checkbox d-flex align-items-center"
                             ><input
                               type="checkbox"
                               class="custom-control-input"

@@ -193,14 +193,15 @@
                       </div>
                     </div>
 
-                    <div class="form-group  mb-4">
+                    <div class="form-group  mb-4  ">
                       <div class="mb-5 mb-sm-0">
-                        <label class="custom-control  "
+                        <label
+                          class="custom-control custom-checkbox d-flex align-items-center"
                           ><input
                             type="checkbox"
-                            class="custom-control-input"
+                            class="custom-control-input "
                             name="example-inline-checkbox1"
-                            required=""
+                            required
                           /><span class="custom-control-label"
                             ><span>I accept &nbsp;</span>
                             <span class=" brand-green" style="cursor: pointer"
@@ -211,7 +212,7 @@
                       </div>
                     </div>
 
-                    <BaseDonorBtn title="CREATE ACCOUNT" />
+                    <BaseDonorBtn />
 
                     <div class="back__btnText ui-text-center  fs-16 mt-3">
                       <span style="position: relative; top: 0px">

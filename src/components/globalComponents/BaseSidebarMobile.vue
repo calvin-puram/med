@@ -32,8 +32,8 @@
               <img
                 :src="Icons.img"
                 :alt="Icons.title"
-                :width="Icons.width ? Icons.width : ''"
-                :height="Icons.width ? Icons.width : ''"
+                width="20px"
+                height="20px"
               /><span class="lnk--text brand-dblue  fs-16">{{
                 Icons.title
               }}</span>

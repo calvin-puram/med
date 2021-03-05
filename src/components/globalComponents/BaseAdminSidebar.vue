@@ -33,50 +33,49 @@ export default {
         {
           to: "/provider/home",
           title: "Home",
-          img: "https://dms.medbarnagency.com/images/assets/icon@home.svg",
+          img: "/img/home.svg",
         },
         {
           to: "/provider/clinics",
           title: "Clinics",
-          img: "https://dms.medbarnagency.com/images/assets/icon@clinic.svg",
+          img: "/img/clinic.svg",
         },
         {
           to: "/provider/donors",
           title: "Donors",
-          img: "https://dms.medbarnagency.com/images/assets/icon@donor.svg",
+          img: "/img/users.svg",
         },
         {
           to: "/provider/agents",
           title: "Agents",
-          img: "https://dms.medbarnagency.com/images/assets/icon@agent-f.svg",
+          img: "/img/agent.svg",
         },
         {
           to: "/provider/enquiries",
           title: "Feedbacks",
-          img: "https://dms.medbarnagency.com/images/assets/requests.svg",
-          width: "20px",
+          img: "/img/message.svg",
         },
 
         {
           to: "/provider/transactions",
           title: "Transactions",
-          img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
+          img: "/img/credit-card.svg",
         },
         {
           to: "/provider/tips",
           title: "Messages",
-          img: "https://dms.medbarnagency.com/images/assets/icon@tip.svg",
+          img: "/img/message-circle.svg",
         },
         {
           to: "/provider/notifications",
           title: "Notifications",
-          img: "https://dms.medbarnagency.com/images/assets/icon@card.svg",
+          img: "/img/bell.svg",
         },
 
         {
           to: "logout",
           title: "Logout",
-          img: "https://dms.medbarnagency.com/images/assets/icon@user.svg",
+          img: "/img/log-out.svg",
         },
       ],
     };
