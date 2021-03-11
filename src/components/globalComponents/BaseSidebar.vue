@@ -1,24 +1,23 @@
 <template>
   <section class="ui-sidebar ssbar--open ">
     <div class="ui-sidebar-primary ssbar--open">
-      <div class="ui-sidebar-primary-header ui-text-center">
-        <!-- check for profile -->
-        <router-link :to="showProfile" class="ui-sidebar-primary-logo"
-          ><img
-            src="https://dms.medbarnagency.com/images/assets/icon@logo-c.svg"
-            alt="Logo"
-            width="50px"
-          />
-          <p class="brand-dblue  fs-15 mt-1 mb-0">
-            metro
-          </p>
-          <span class=" brand-green" v-if="showProfile === '/clinic/profile'"
-            >Profile</span
-          ></router-link
+      <div class=" ui-sidebar-primary-header">
+        <div
+          class="d-flex align-items-center justify-content-between ui__header"
         >
-        <!-- end check for profile -->
+          <img src="@/assets/img/medbarn.svg" alt="Logo" width="100px" />
+
+          <div class="mobileHambuger" @click="toogleMenu">
+            <img
+              src="@/assets/img/bar.svg"
+              alt="mobile hamburger"
+              width="20px"
+              height="20px"
+            />
+          </div>
+        </div>
       </div>
-      <div class="ui-sidebar-primary-body ">
+      <div class="sidebar ">
         <ul class="ui-sidebar-primary-links">
           <li v-for="Icons in sidebarIcons" :key="Icons.title">
             <router-link
@@ -32,12 +31,7 @@
                 height="20px"
               /><span class="lnk--text brand-dblue  fs-16">{{
                 Icons.title
-              }}</span
-              ><span
-                v-if="Icons.title === 'Notifications'"
-                class="lnk--text brand-orange ui-pull-right ml-3  fs-14"
-                >1</span
-              >
+              }}</span>
               <span
                 v-if="Icons.title === 'Clinics'"
                 class="lnk--text brand-orange ui-pull-right ml-3  fs-14"
@@ -66,6 +60,14 @@ export default {
 </script>
 <style lang="scss">
 @import "../../design/";
+.ui__header {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.sidebar {
+  margin-top: 2rem;
+}
 @media screen and (max-width: 1024px) {
   .ui-sidebar-primary-body {
     top: 190px;

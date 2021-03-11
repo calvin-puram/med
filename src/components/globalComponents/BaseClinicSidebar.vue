@@ -33,37 +33,33 @@ export default {
         {
           to: "/clinic/home",
           title: "Home",
-          img: "/img/home.svg",
+          img: "/img/homeicon.svg",
         },
         {
           to: "/clinic/requests",
           title: "Requests",
-          img: "/img/message.svg",
+          img: "/img/messageicon.svg",
         },
         {
           to: "/clinic/donors",
           title: "Visits",
-          img: "/img/users.svg",
+          img: "/img/usersicon.svg",
         },
         {
           to: "/clinic/transactions",
           title: "Transactions",
-          img: "/img/credit-card.svg",
+          img: "/img/wallet.svg",
         },
-        {
-          to: "/clinic/notifications",
-          title: "Notifications",
-          img: "/img/bell.svg",
-        },
+
         {
           to: "/clinic/users",
           title: "Users",
-          img: "/img/user.svg",
+          img: "/img/usericon.svg",
         },
         {
           to: "logout",
           title: "Logout",
-          img: "/img/log-out.svg",
+          img: "/img/logouticon.svg",
         },
       ],
     };

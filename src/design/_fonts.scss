@@ -1,10 +1,13 @@
-$body-font-family: "Roboto", sans-serif;
+$body-font-family: "Open Sans", sans-serif;
 
 $heading-font-family: $body-font-family;
 $heading-font-weight: 400;
 
 $content-font-family: $body-font-family;
 $content-font-weight: 100;
+
+$formLabel-font-family: $body-font-family;
+$formLabel-font-weight: 600;
 
 %font-heading {
   font-family: $heading-font-family;
@@ -16,4 +19,11 @@ $content-font-weight: 100;
   font-family: $content-font-family;
   font-weight: $content-font-weight;
   color: $color-text;
+}
+
+%form-label {
+  font-family: $formLabel-font-family;
+  font-weight: $formLabel-font-weight;
+  color: $brand-dgreen;
+  font-size: 14px;
 }

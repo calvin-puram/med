@@ -21,7 +21,7 @@
                         Create a clinic account
                       </p>
                       <div class="ml-auto centralize">
-                        <div class="back__btnText  fs-16">
+                        <div class="back__btnText ">
                           <span style="position: relative; top: 0px">
                             <img
                               src="@/assets/img/Intersection 1.svg"
@@ -38,9 +38,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="first-name" class="fs-14  brand-dblue"
-                              >Clinic name</label
-                            >
+                            <label for="first-name">Clinic name</label>
 
                             <input
                               type="text"
@@ -55,9 +53,7 @@
 
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="fs-14  brand-dblue"
-                              >Business email</label
-                            >
+                            <label>Business email</label>
                             <input
                               type="text"
                               class="form-control "
@@ -73,10 +69,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label
-                              class="fs-14 font-quicksandsemibold brand-dblue"
-                              >Official phone number</label
-                            >
+                            <label>Official phone number</label>
                             <input
                               type="number"
                               class="form-control "
@@ -89,10 +82,7 @@
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label
-                              class="fs-14 font-quicksandsemibold brand-dblue"
-                              >Enter a password</label
-                            >
+                            <label>Enter a password</label>
                             <input
                               type="password"
                               class="form-control "
@@ -109,9 +99,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group select__padding">
-                            <label class="fs-14 brand-dblue"
-                              >Official address</label
-                            >
+                            <label>Official address</label>
                             <input
                               type="text"
                               class="form-control "
@@ -126,10 +114,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label
-                              class="fs-14 font-quicksandsemibold brand-dblue"
-                              >State</label
-                            >
+                            <label>State</label>
                             <select class="form-control custom-select" required>
                               <option value="">Select state</option>
                               <option
@@ -145,10 +130,7 @@
 
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label
-                              class="fs-14 font-quicksandsemibold brand-dblue"
-                              >Date of Establishment</label
-                            >
+                            <label>Date of Establishment</label>
                             <datepicker
                               placeholder="Select date of establishment"
                               input-class="form-control"
@@ -167,8 +149,8 @@
                               name="example-inline-checkbox1"
                               required=""
                             /><span class="custom-control-label"
-                              ><span>I accept &nbsp;</span>
-                              <span class=" brand-green" style="cursor: pointer"
+                              ><span class="normal-text">I accept &nbsp;</span>
+                              <span class=" dark-blue" style="cursor: pointer"
                                 >terms &amp; conditions</span
                               ></span
                             ></label
@@ -178,7 +160,7 @@
                         <div class=" center_btn">
                           <button
                             type="submit"
-                            class="btn btn-adj btn-block bg-brand-green onwhite  btn-sm"
+                            class="btn btn-adj btn-block bg-dark-blue onwhite  btn-sm"
                           >
                             CREATE ACCOUNT
                           </button>
@@ -186,7 +168,7 @@
 
                         <div class="ui-text-center mt-5 mb-2">
                           Already have an account?
-                          <router-link to="/" class="brand-green  fs-14">
+                          <router-link to="/" class="dark-blue  fs-14">
                             Sign In</router-link
                           >
                         </div>
@@ -227,7 +209,7 @@ export default {
 @import "../../design";
 
 .ui-full-bg-norm {
-  @include ui-full-bg-norm("../../assets/img/authbg.svg");
+  @include ui-full-bg-norm("../../assets/img/authbg.png");
 }
 .frm--cstm.auth .btn {
   width: 100%;

@@ -33,49 +33,44 @@ export default {
         {
           to: "/provider/home",
           title: "Home",
-          img: "/img/home.svg",
+          img: "/img/homeicon.svg",
         },
         {
           to: "/provider/clinics",
           title: "Clinics",
-          img: "/img/clinic.svg",
+          img: "/img/clinicicon.svg",
         },
         {
           to: "/provider/donors",
           title: "Donors",
-          img: "/img/users.svg",
+          img: "/img/usersicon.svg",
         },
         {
           to: "/provider/agents",
           title: "Agents",
-          img: "/img/agent.svg",
+          img: "/img/usericon.svg",
         },
         {
           to: "/provider/enquiries",
           title: "Feedbacks",
-          img: "/img/message.svg",
+          img: "/img/comments.svg",
         },
 
         {
           to: "/provider/transactions",
           title: "Transactions",
-          img: "/img/credit-card.svg",
+          img: "/img/wallet.svg",
         },
         {
           to: "/provider/tips",
           title: "Messages",
-          img: "/img/message-circle.svg",
-        },
-        {
-          to: "/provider/notifications",
-          title: "Notifications",
-          img: "/img/bell.svg",
+          img: "/img/Messageicon.svg",
         },
 
         {
           to: "logout",
           title: "Logout",
-          img: "/img/log-out.svg",
+          img: "/img/logouticon.svg",
         },
       ],
     };

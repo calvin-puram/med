@@ -58,6 +58,7 @@ p {
 }
 
 label {
+  @extend %form-label;
   display: inline-block;
   margin-bottom: 0.5rem;
 }
@@ -65,6 +66,7 @@ label {
 .frm--cstm.auth .form-control {
   height: 50px;
   padding: 0.4rem 1.3rem;
+  font-size: 14px;
 }
 
 .frm--cstm .form-control {
@@ -72,7 +74,7 @@ label {
   padding: 0.4rem 0.9rem;
   border-radius: 4px;
   border: 1px solid #d9e4f2;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 .form-control {

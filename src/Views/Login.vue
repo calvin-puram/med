@@ -13,11 +13,11 @@
                       alt="med barn"
                       style="width: 100px; margin-top: 10px"
                     />
-                    <p class=" brand-dgreen fs-20 mb-0 font-weight-bold">
+                    <p class=" brand-dgreen fs-20 mb-0 font-weight-bold mt-4">
                       Sign in to your account
                     </p>
 
-                    <small class="mb-5 brand-dgreen"
+                    <small class="mb-5"
                       >Sign in with either your email or phone number</small
                     >
                   </div>
@@ -41,10 +41,10 @@
                     <b-form-group
                       id="password"
                       label="Your password"
-                      label-for="email"
+                      label-for="password"
                     >
                       <b-form-input
-                        id="email"
+                        id="password"
                         type="email"
                         placeholder="Enter your password"
                         required
@@ -60,12 +60,12 @@
                     </span>
                   </div>
 
-                  <b-button block type="submit" class="bg-brand-green onwhite"
+                  <b-button block type="submit" class="bg-dark-blue onwhite"
                     >Submit</b-button
                   >
                   <div class="ui-text-center mt-2 mb-2">
                     Don't have an account?
-                    <router-link class="brand-green" to="/register">
+                    <router-link class="dark-blue fs-14" to="/register">
                       Sign up</router-link
                     >
                   </div>
@@ -88,13 +88,13 @@ export default {
 <style lang="scss" scoped>
 @import "../design/";
 .ui-full-bg-norm {
-  @include ui-full-bg-norm("../assets/img/authbg.svg");
+  @include ui-full-bg-norm("../assets/img/authbg.png");
 }
 
 .link__text {
   font-size: 0.9rem;
-  color: #333;
-  opacity: 0.5;
+  font-weight: 400;
+  color: $onboarding-btn;
   text-decoration: underline;
   cursor: pointer;
 }

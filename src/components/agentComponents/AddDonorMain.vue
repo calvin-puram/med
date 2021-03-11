@@ -1,28 +1,14 @@
 <template>
-  <main>
-    <div
-      :class="
-        menuIcons ? 'ui-dashboard-body ' : 'ui-dashboard-body sdbr--open  '
-      "
-    >
-      <div>
-        <div class="body">
-          <BaseDashboardNav
-            title="Add a new donor"
-            :menuIcons="menuIcons"
-            :toogleMenu="toogleMenu"
-          />
-          <section class="ui-body-content">
-            <div class="ui-body-content-inner">
-              <div class="ui-separate"></div>
-              <div class="ui-dashboard-card">
-                <div
-                  class="ui-dashboard-card-body ui-full-bg-norm ui-rounded-small"
-                >
-                  <div class="ui-separate mb-1"></div>
-                </div>
-              </div>
-              <section class="mt-2">
+  <BaseWrapper
+    dashboardName="Add a new donor"
+    :menuIcons="menuIcons"
+    :toogleMenu="toogleMenu"
+    bg__img="bg__img"
+    bg__color="primary-color"
+    profile="/agent/profile"
+    notification="/agent/notifications"
+  >
+    <section class="mt-2">
                 <div class="ui-dashboard-card">
                   <div class="ui-dashboard-card-header">
                     <h3 class="ui-card-title brand-dblue">
@@ -547,15 +533,11 @@
                   </div>
                 </div>
               </section>
-            </div>
-          </section>
-        </div>
-      </div>
-      <!-- footer -->
-      <BaseDashboardFooter />
-    </div>
-  </main>
+  </BaseWrapper>
 </template>
+
+
+
 <script>
 export default {
   components: {},
@@ -572,10 +554,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../../design";
-.body {
-  background: #f5f8fd;
-}
 
 .ui-hide {
   display: none !important;
@@ -594,9 +572,6 @@ export default {
   transition: all 0.3s ease;
 }
 
-.ui-full-bg-norm {
-  @include ui-full-bg-norm("../../assets/img/fullsearchimg.svg");
-}
 
 @media screen and (max-width: 768px) {
   .ui-dashboard-card-header {
@@ -606,13 +581,7 @@ export default {
     }
   }
 
-  .ui-dashboard-body.sdbr--open {
-    padding-left: 0px !important;
-  }
 
-  .frm--card .ctrl--fnd {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 360px) {

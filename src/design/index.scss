@@ -11,10 +11,9 @@
 }
 
 body {
+  @extend %font-content;
   background: $color-body-bg;
-  font-family: $body-font-family;
   font-size: 1rem;
-  font-weight: 300;
   line-height: 1.5;
   color: $color-text;
   text-align: left;
@@ -47,6 +46,28 @@ body {
 .bg-brand-green {
   background-color: $bg-brand-green;
 }
+//new
+.bg-dark-blue {
+  background-color: $onboarding-btn;
+}
+
+.dark-blue,
+.dark-blue a {
+  color: $onboarding-btn !important;
+}
+
+.dark-blue-bold,
+.dark-blue-bold a {
+  @extend %form-label;
+}
+
+.normal-text {
+  color: $color-text;
+}
+.normal-text-bold {
+  color: $color-text;
+  font-weight: 400;
+}
 
 .ui-rounded-small {
   border-radius: 0.5em;
@@ -57,7 +78,8 @@ body {
 }
 
 .auth--brand .back__btnText a {
-  color: #35999e !important;
+  color: $brand-dgreen !important;
+  font-size: 14px;
 }
 
 .auth--brand img {
@@ -92,9 +114,7 @@ body {
 }
 
 .text__h5 {
-  color: $section-heading;
-  font-family: $body-font-family;
-  font-weight: 400;
+  @extend %font-heading;
 }
 
 .brand-dgreen,
@@ -109,8 +129,16 @@ body {
   color: $brand-dgreen !important;
 }
 
+.bg-brand-bluemd {
+  background-color: $back-btn !important;
+}
+
 .fs-14 {
   font-size: 14px;
+}
+
+.fs-12 {
+  font-size: 12px;
 }
 
 .fs-20 {

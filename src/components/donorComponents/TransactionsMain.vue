@@ -11,6 +11,8 @@
             title="Transactions"
             :menuIcons="menuIcons"
             :toogleMenu="toogleMenu"
+            profile="/profile"
+            notification="/notifications"
           />
           <section class="ui-body-content">
             <div class="ui-body-content-inner">
@@ -39,7 +41,7 @@
                 </div>
               </div>
 
-              <section class="mrgt2">
+              <section class="mt-2">
                 <div class="ui-dashboard-card">
                   <div class="ui-dashboard-card-header">
                     <div class="ui-card-header-options">

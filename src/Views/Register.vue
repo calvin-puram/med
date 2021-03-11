@@ -21,7 +21,7 @@
                       class="ui-avatar-medium"
                       alt="avatar"
                     />
-                    <p class=" brand-green fs-20 mb-0 mt-2 font-weight-bold">
+                    <p class=" dark-blue fs-20 mb-0 mt-2 font-weight-bold">
                       Donor
                     </p>
                     <p class=" brand-dgreen fs-14 mb-0 mt-1">
@@ -41,7 +41,7 @@
                       class="ui-avatar-medium"
                       alt="avatar"
                     />
-                    <p class=" brand-green fs-20 mb-0 mt-2 font-weight-bold">
+                    <p class=" dark-blue fs-20 mb-0 mt-2 font-weight-bold">
                       Clinic
                     </p>
                     <p class=" brand-dgreen fs-14 mb-0 mt-1">
@@ -62,7 +62,7 @@
                       class="ui-avatar-medium"
                       alt="avatar"
                     />
-                    <p class=" brand-green fs-20 mb-0 mt-2 font-weight-bold">
+                    <p class=" dark-blue fs-20 mb-0 mt-2 font-weight-bold">
                       Agent
                     </p>
                     <p class=" brand-dgreen fs-14 mb-0 mt-1">
@@ -95,7 +95,7 @@ export default {
 <style lang="scss" scoped>
 @import "../design/";
 .ui-full-bg-norm {
-  @include ui-full-bg-norm("../assets/img/authbg.svg");
+  @include ui-full-bg-norm("../assets/img/authbg.png");
 }
 
 .auth--bx.ui-text-center {

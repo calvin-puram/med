@@ -1,140 +1,66 @@
 <template>
-  <section class="ui__wrapper-large ui-full-bg-norm ui-height-full">
-    <div class="container-fluid">
+  <BaseDonorStepWrapper
+    text="We need to verify your NIMC number before proceeding to sign up"
+    step="1/5"
+    desc="Create a donor/surrogate account"
+  >
+    <form class="">
       <div class="row">
-        <div class="col-md-8 col-lg-6 mx-auto">
-          <div class="ui-wrapper">
-            <form class="form--white frm--cstm auth was-validated">
-              <div class="form-space">
-                <div class="bg-white ui-rounded-small">
-                  <div class="ui-text-left auth--brand mb-5 pt-1">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-1"
-                    >
-                      <img
-                        src="@/assets/img/medbarn.svg"
-                        alt="med barn"
-                        style="width: 100px; margin-top: 10px"
-                      />
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="first-name">First name</label>
 
-                      <span class="donor__textcolor">1/5</span>
-                    </div>
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-2"
-                    >
-                      <p class=" brand-dgreen  mb-0 ">
-                        Create a donor/surrogate account
-                      </p>
+            <input
+              type="text"
+              class="form-control "
+              placeholder="e.g. Abulbaki"
+              id="first-name"
+              required
+              value=""
+            />
+          </div>
+        </div>
 
-                      <div class="back__btnText  fs-16">
-                        <span style="position: relative; top: 0px">
-                          <img
-                            src="@/assets/img/Intersection 1.svg"
-                            alt="back arrow"
-                          />
-                        </span>
-                        &nbsp;
-                        <router-link to="/register">Go Back</router-link>
-                      </div>
-                    </div>
-
-                    <small class="mb-5 donor__textcolor donor__text"
-                      >We need to verify your NIMC number before
-                      <span class="d-block"> proceeding to sign up</span>
-                    </small>
-                  </div>
-
-                  <form class="">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="first-name" class="fs-14  brand-dblue"
-                            >First name</label
-                          >
-
-                          <input
-                            type="text"
-                            class="form-control "
-                            placeholder="e.g. John"
-                            id="first-name"
-                            required=""
-                            value=""
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="fs-14  brand-dblue">Last name</label>
-                          <input
-                            type="text"
-                            class="form-control "
-                            placeholder="e.g. Doe"
-                            id="last-name"
-                            required=""
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="fs-14  brand-dblue">NIN number</label>
-                          <input
-                            type="number"
-                            class="form-control "
-                            placeholder="Enter your NIMC number here"
-                            id="address"
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <BaseDonorBtn />
-                  </form>
-
-                  <div class="ui-text-center mt-2 mb-2">
-                    Don't have an account?
-                    <router-link class="brand-green" to="/register">
-                      Sign up</router-link
-                    >
-                  </div>
-                </div>
-              </div>
-            </form>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Last name</label>
+            <input
+              type="text"
+              class="form-control "
+              placeholder="e.g. Shuaib"
+              id="last-name"
+              required
+              value=""
+            />
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>NIN number</label>
+            <input
+              type="number"
+              class="form-control "
+              placeholder="Enter your NIMC number here"
+              id="address"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <BaseDonorBtn />
+    </form>
+
+    <div class="ui-text-center mt-2 mb-2">
+      Don't have an account?
+      <router-link class="dark-blue" to="/register"> Sign up</router-link>
     </div>
-  </section>
+  </BaseDonorStepWrapper>
 </template>
 
-<script>
-export default {
-  name: "Login",
-};
-</script>
+<script></script>
 
-<style lang="scss" scoped>
-@import "../../design/";
-.ui-full-bg-norm {
-  @include ui-full-bg-norm("../../assets/img/authbg.svg");
-}
-.donor__text {
-  width: 100px !important;
-}
-
-.donor__textcolor {
-  color: #35a6c7;
-
-  @media (max-width: 789px) {
-    .form--white .d-flex {
-      display: flex !important ;
-      text-align: left !important;
-    }
-  }
-}
-</style>
+<style lang="scss" scoped></style>

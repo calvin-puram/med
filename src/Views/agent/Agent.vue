@@ -21,7 +21,7 @@
                         Create an agent account
                       </p>
                       <div class="ml-auto centralize">
-                        <div class="back__btnText  fs-16">
+                        <div class="back__btnText">
                           <span style="position: relative; top: 0px">
                             <img
                               src="@/assets/img/Intersection 1.svg"
@@ -38,9 +38,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="first-name" class="fs-14  brand-dblue"
-                              >First name</label
-                            >
+                            <label for="first-name">First name</label>
 
                             <input
                               type="text"
@@ -55,7 +53,7 @@
 
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="fs-14  brand-dblue">Last name</label>
+                            <label>Last name</label>
                             <input
                               type="text"
                               class="form-control "
@@ -71,7 +69,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="fs-14  brand-dblue">Email</label>
+                            <label>Email</label>
                             <input
                               type="email"
                               class="form-control "
@@ -85,9 +83,7 @@
 
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="fs-14  brand-dblue"
-                              >Phone number</label
-                            >
+                            <label>Phone number</label>
                             <input
                               type="number"
                               class="form-control "
@@ -103,9 +99,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="fs-14  brand-dblue"
-                              >Enter a password</label
-                            >
+                            <label>Enter a password</label>
                             <input
                               type="password"
                               class="form-control "
@@ -119,9 +113,7 @@
 
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="fs-14  brand-dblue"
-                              >Official Address</label
-                            >
+                            <label>Official Address</label>
                             <input
                               type="text"
                               class="form-control "
@@ -137,7 +129,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="fs-14  brand-dblue">State</label>
+                            <label>State</label>
                             <select class="form-control custom-select" required>
                               <option value="">Select state</option>
                               <option
@@ -153,9 +145,7 @@
 
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="fs-14  brand-dblue"
-                              >Date of birth</label
-                            >
+                            <label>Date of birth</label>
                             <datepicker
                               placeholder="Select date of birth"
                               input-class="form-control dob"
@@ -168,15 +158,15 @@
                       <div class="form-group  mb-0 mt-3">
                         <div class="mb-5 mb-sm-0">
                           <label
-                            class="custom-control custom-checkbox d-flex align-items-center"
+                            class="custom-control  custom-checkbox d-flex align-items-center"
                             ><input
                               type="checkbox"
                               class="custom-control-input"
                               name="example-inline-checkbox1"
                               required=""
                             /><span class="custom-control-label"
-                              ><span>I accept &nbsp;</span>
-                              <span class=" brand-green" style="cursor: pointer"
+                              ><span class="normal-text">I accept &nbsp;</span>
+                              <span class=" dark-blue" style="cursor: pointer"
                                 >terms &amp; conditions</span
                               ></span
                             ></label
@@ -186,7 +176,7 @@
                         <div class="ml-auto center_btn">
                           <button
                             type="submit"
-                            class="btn btn-adj btn-block bg-brand-green onwhite  btn-sm"
+                            class="btn btn-adj btn-block bg-dark-blue onwhite  btn-sm"
                           >
                             CREATE ACCOUNT
                           </button>
@@ -194,7 +184,7 @@
 
                         <div class="ui-text-center mt-5 mb-2">
                           Already have an account?
-                          <router-link to="/" class="brand-green  fs-14">
+                          <router-link to="/" class="dark-blue  fs-14">
                             Sign In</router-link
                           >
                         </div>
@@ -229,7 +219,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../design";
 .ui-full-bg-norm {
-  @include ui-full-bg-norm("../../assets/img/authbg.svg");
+  @include ui-full-bg-norm("../../assets/img/authbg.png");
 }
 
 .frm--cstm.auth .btn {

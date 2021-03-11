@@ -1,23 +1,48 @@
-<template lang="">
+<template>
   <div class="ui-topbar">
     <div class="ui-topbar-inner">
-      <div class="d-flex align-items-center">
-        <div class="pr-1 click">
-          <div class="hmb--btn but1" @click="toogleMenu">
-            <i
-              class="fas fa-bars mr-5 onsilverlight fs-20 mt-2 ui-hide-mobile-only "
-            ></i>
-          </div>
-        </div>
+      <div class="d-flex align-items-center justify-content-between">
         <div>
           <p class="mb-0">
-            <span class="mb-0  brand-dblue fs-20">{{ title }}</span
-            ><span class=" onsilverlight fs-20" v-if="title === 'Dashboard'"
-              >&nbsp;&nbsp; | &nbsp;&nbsp;</span
-            >
+            <span class="normal-text-bold font-weight-bold fs-20">{{
+              title
+            }}</span>
           </p>
         </div>
-        <div class="ui-topbar-options"></div>
+        <div>
+          <ul class="ui-topbar-options mb-0">
+            <li>
+              <img src="@/assets/img/search.svg" alt="search" width="25px" />
+            </li>
+            <li class="ui-notification">
+              <router-link :to="notification">
+                <img
+                  src="@/assets/img/notice-active.svg"
+                  alt="bell icon"
+                  width="25px"
+                />
+                <span class="ui-noty">2</span>
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="profile">
+                <div class="d-flex align-items-center">
+                  <div class="ui-profile-name ">
+                    <p class="normal-text-bold font-weight-bold m-0 fs-12">
+                      Abdulbaki
+                    </p>
+                    <p class="normal-text m-0 fs-12">Donor</p>
+                  </div>
+                  <img
+                    src="@/assets/img/user-4.jpg"
+                    alt="Avatar"
+                    class="ui-avatar-profile"
+                  />
+                </div>
+              </router-link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -37,6 +62,14 @@ export default {
     },
     toogleMenu: {
       type: Function,
+      required: true,
+    },
+    profile: {
+      type: String,
+      required: true,
+    },
+    notification: {
+      type: String,
       required: true,
     },
   },

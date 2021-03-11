@@ -2,7 +2,7 @@
   <div>
     <router-link
       :to="link"
-      class="btn btn-block btn--sm onwhite mb-4"
+      class="btn  btn--sm onwhite mb-4"
       :style="{ background: color, borderColor: color }"
     >
       {{ text }}
@@ -34,5 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import "../../design/";
+.btnwidth {
+  width: 100% !important;
+}
 </style>
