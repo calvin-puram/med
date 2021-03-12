@@ -1,8 +1,16 @@
 <template>
-  <div class="ui-topbar">
+  <div class="ui-topbar ">
     <div class="ui-topbar-inner">
       <div class="d-flex align-items-center justify-content-between">
-        <div>
+        <div class="d-flex align-items-center">
+          <div class="mobileHambuger mr-3 d-none" @click="toogleMenu">
+            <img
+              src="@/assets/img/bar.svg"
+              alt="mobile hamburger"
+              width="20px"
+              height="20px"
+            />
+          </div>
           <p class="mb-0">
             <span class="normal-text-bold font-weight-bold fs-20">{{
               title
@@ -11,9 +19,7 @@
         </div>
         <div>
           <ul class="ui-topbar-options mb-0">
-            <li>
-              <img src="@/assets/img/search.svg" alt="search" width="25px" />
-            </li>
+            <li><img src="@/assets/img/search.svg" alt="search" /></li>
             <li class="ui-notification">
               <router-link :to="notification">
                 <img
@@ -24,7 +30,7 @@
                 <span class="ui-noty">2</span>
               </router-link>
             </li>
-            <li>
+            <li class="profile">
               <router-link :to="profile">
                 <div class="d-flex align-items-center">
                   <div class="ui-profile-name ">
@@ -76,9 +82,18 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../../design/";
-
 .click {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .mobileHambuger {
+    display: flex !important;
+  }
+
+  .ui-notification,
+  .profile {
+    display: none;
+  }
 }
 </style>

@@ -26,7 +26,7 @@
                   </div>
 
                   <div class="form-group mt-4 mb-0">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center auth--brand">
                       <span>
                         <router-link
                           class="brand-dgreen"
@@ -38,7 +38,7 @@
                       <div class="ml-auto">
                         <button
                           type="submit"
-                          class="btn bg-dark-blue onwhite font-quicksandmedium btn-sm"
+                          class="btn bg-dark-blue onwhite  btn--sm"
                         >
                           RESET PASSWORD
                         </button>
@@ -48,8 +48,9 @@
 
                   <div class="ui-text-center mt-5 mb-2">
                     <div class="  fs-14">
-                      <router-link class="dark-blue" to="/register"
-                        >Don't have an account? Sign up</router-link
+                      Don't have an account?
+                      <router-link class="dark-blue" to="/register">
+                        Sign up</router-link
                       >
                     </div>
                   </div>

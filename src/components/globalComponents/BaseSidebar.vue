@@ -18,8 +18,12 @@
         </div>
       </div>
       <div class="sidebar ">
-        <ul class="ui-sidebar-primary-links">
-          <li v-for="Icons in sidebarIcons" :key="Icons.title">
+        <ul
+          class="ui-sidebar-primary-links"
+          v-for="Icons in sidebarIcons"
+          :key="Icons.title"
+        >
+          <li v-if="Icons.title !== 'Notifications'">
             <router-link
               class="ui-icon-animate"
               :title="Icons.title"
@@ -32,6 +36,7 @@
               /><span class="lnk--text brand-dblue  fs-16">{{
                 Icons.title
               }}</span>
+
               <span
                 v-if="Icons.title === 'Clinics'"
                 class="lnk--text brand-orange ui-pull-right ml-3  fs-14"
@@ -45,7 +50,9 @@
   </section>
 </template>
 <script>
+import { mapActions, mapGetters } from "vuex";
 export default {
+  computed: mapGetters(["menuIcons"]),
   props: {
     sidebarIcons: {
       type: Array,
@@ -55,6 +62,9 @@ export default {
       type: String,
       required: false,
     },
+  },
+  methods: {
+    ...mapActions(["toogleMenu"]),
   },
 };
 </script>
@@ -68,6 +78,7 @@ export default {
 .sidebar {
   margin-top: 2rem;
 }
+
 @media screen and (max-width: 1024px) {
   .ui-sidebar-primary-body {
     top: 190px;

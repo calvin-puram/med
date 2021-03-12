@@ -5,6 +5,8 @@
     :toogleMenu="toogleMenu"
     bg__img="bg__img"
     bg__color="primary-color"
+    profile="/provider/profile"
+    notification="/provider/notifications"
   >
     <section class="mt-2">
       <div class="ui-dashboard-card">

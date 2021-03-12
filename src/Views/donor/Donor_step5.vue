@@ -171,7 +171,7 @@
           <img src="@/assets/img/Intersection 1.svg" alt="back arrow" />
         </span>
         &nbsp;
-        <router-link to="/register">Go Back</router-link>
+        <router-link class="back__btnText" to="/register">Go Back</router-link>
       </div>
 
       <div class="ui-text-center mt-3 mb-2">

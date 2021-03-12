@@ -33,37 +33,37 @@ export default {
         {
           to: "/home",
           title: "Home",
-          img: "img/home.svg",
+          img: "/img/homeicon.svg",
         },
         {
           to: "/clinics",
           title: "Clinics",
-          img: "/img/clinic.svg",
+          img: "/img/hospital.svg",
         },
         {
           to: "/requests",
           title: "Requests",
-          img: "/img/message.svg",
+          img: "/img/messageicon.svg",
         },
         {
           to: "/provider",
           title: "Provider",
-          img: "/img/message-circle.svg",
+          img: "/img/comments.svg",
         },
         {
           to: "transactions",
           title: "Transactions",
-          img: "/img/credit-card.svg",
+          img: "/img/wallet.svg",
         },
         {
           to: "/notifications",
           title: "Notifications",
-          img: "/img/bell.svg",
+          img: "/img/noty.svg",
         },
         {
           to: "logout",
           title: "Logout",
-          img: "/img/log-out.svg",
+          img: "/img/logouticon.svg",
         },
       ],
     };

@@ -60,7 +60,10 @@
                     </span>
                   </div>
 
-                  <b-button block type="submit" class="bg-dark-blue onwhite"
+                  <b-button
+                    block
+                    type="submit"
+                    class="bg-dark-blue btn--sm onwhite"
                     >Submit</b-button
                   >
                   <div class="ui-text-center mt-2 mb-2">

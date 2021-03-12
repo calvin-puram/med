@@ -12,17 +12,17 @@
                     <img
                       src="@/assets/img/medbarn.svg"
                       style="width: 100px; margin-top: 30px"
-                      alt="medbarn"
+                      alt="quiv"
                     />
                     <div
-                      class="d-flex align-items-center auth--brand mb-5 pt-5"
+                      class="d-flex align-items-center justify-content-between auth--brand mb-5 pt-5"
                     >
                       <p class=" brand-dgreen fs-20 mb-0 font-weight-bold">
                         Create a clinic account
                       </p>
-                      <div class="ml-auto centralize">
+                      <div class=" centralize">
                         <div class="back__btnText ">
-                          <span style="position: relative; top: 0px">
+                          <span>
                             <img
                               src="@/assets/img/Intersection 1.svg"
                               alt="back arrow"
@@ -160,7 +160,7 @@
                         <div class=" center_btn">
                           <button
                             type="submit"
-                            class="btn btn-adj btn-block bg-dark-blue onwhite  btn-sm"
+                            class="btn btn-adj btn-block bg-dark-blue onwhite  btn--sm"
                           >
                             CREATE ACCOUNT
                           </button>

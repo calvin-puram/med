@@ -1,25 +1,43 @@
 <template>
   <BaseWrapperWithDashboardTabs
-    dashboardName="Transactions"
+    dashboardName="Messages"
     :menuIcons="menuIcons"
     :toogleMenu="toogleMenu"
-    :tabsData="tabsData"
+    bg__color="primary-color"
+    profile="/provider/profile"
+    notification="/provider/notifications"
   >
     <div class="row spec--bx">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="ui-dashboard-card">
           <div class="ui-dashboard-card-body ui-full-bg-norm ui-rounded-small">
-            <h2 class=" brand-alblue fs-24 mt-1">
-              Balance
-            </h2>
-            <h1 class=" fs-40">0</h1>
-            <div>
-              <p class=" mb-0">
-                Bank: Rubies Microfinance Bank
-              </p>
-              <p>
-                Acct Number: 7084830006
-              </p>
+            <div
+              class="d-flex justify-content-between align-items-center onmobile-column"
+            >
+              <div class="total__balance-sec">
+                <p class="total onwhite mb-0 fs-24 mt-1">
+                  Total Balance
+                </p>
+                <h1 class=" fs-40 onwhite font-weight-bold">
+                  <span class="naira">&#8358;</span>
+                  0.00
+                </h1>
+                <div class="mt-4">
+                  <p class=" onwhite mb-0">
+                    Bank: Rubies Microfinance Bank
+                  </p>
+                  <p class="onwhite">
+                    Acct Number: 7084830006
+                  </p>
+                </div>
+              </div>
+
+              <img
+                src="../../assets/img/transactionimg.svg"
+                alt="transaction"
+                height="200px"
+                class="txt__balance-img"
+              />
             </div>
           </div>
         </div>
@@ -28,117 +46,23 @@
 
     <section class="mt-2">
       <div class="ui-dashboard-card">
-        <div class="ui-dashboard-card-header">
-          <div class="ui-card-header-options">
-            <div class="ui-group-button d-flex align-items-center"></div>
-          </div>
+        <div
+          class=" d-flex align-items-center justify-content-between txt__header onmobile-column"
+        >
+          <h4 class="history font-weight-bold">Transaction History</h4>
+          <button class="btn btn--sm btn-color">
+            <img src="@/assets/img/reload.svg" class="mr-3" alt="reload" />
+            Refresh
+          </button>
+        </div>
+        <div class="divider">
+          <hr />
         </div>
         <div class="ui-dashboard-card-body">
-          <div class="table-responsive">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th class=" pb-1 ui-capitalize fs-14">
-                    Date
-                  </th>
-                  <th class=" pb-1 ui-capitalize fs-14">
-                    Amount
-                  </th>
-                  <th class=" pb-1 ui-capitalize fs-14">
-                    Description
-                  </th>
-                  <th class=" pb-1 ui-capitalize fs-14">
-                    status
-                  </th>
-                  <th class=" pb-1 ui-capitalize fs-14">
-                    Previous Balance
-                  </th>
-                  <th class=" pb-1 ui-capitalize fs-14">
-                    New Balance
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="tr--lnk">
-                  <td>
-                    <label class="custom-control custom-checkbox"
-                      ><input
-                        type="checkbox"
-                        class="custom-control-input"
-                        name="example-inline-checkbox1"
-                        value="option1"/><span
-                        class="custom-control-label "
-                      ></span
-                    ></label>
-                  </td>
-                  <td class="font-quicksandregular">23 Sep, 2019</td>
-                  <td class="font-quicksandregular">0</td>
-                  <td class="font-quicksandregular">
-                    Cashback for purchase 80423
-                  </td>
-                  <td class="font-quicksandregular">completed</td>
-                  <td class="font-quicksandregular">2350</td>
-                  <td class="font-quicksandregular">2350</td>
-                </tr>
-                <tr class="tr--lnk">
-                  <td>
-                    <label class="custom-control custom-checkbox"
-                      ><input
-                        type="checkbox"
-                        class="custom-control-input"
-                        name="example-inline-checkbox1"
-                        value="option1"/><span
-                        class="custom-control-label "
-                      ></span
-                    ></label>
-                  </td>
-                  <td class="font-quicksandregular">23 Sep, 2019</td>
-                  <td class="font-quicksandregular">-950</td>
-                  <td class="font-quicksandregular">
-                    NGN950 - Donor IVF -
-                    GDMS-BVN_VERIFICATION_FEE675662407/22283634758/1600891581778
-                  </td>
-                  <td class="font-quicksandregular">completed</td>
-                  <td class="font-quicksandregular">3300</td>
-                  <td class="font-quicksandregular">2350</td>
-                </tr>
-                <tr class="tr--lnk">
-                  <td>
-                    <label class="custom-control custom-checkbox"
-                      ><input
-                        type="checkbox"
-                        class="custom-control-input"
-                        name="example-inline-checkbox1"
-                        value="option1"/><span
-                        class="custom-control-label "
-                      ></span
-                    ></label>
-                  </td>
-                  <td class="font-quicksandregular">23 Sep, 2019</td>
-                  <td class="font-quicksandregular">0</td>
-                  <td class="font-quicksandregular">
-                    Cashback for purchase 80422
-                  </td>
-                  <td class="font-quicksandregular">completed</td>
-                  <td class="font-quicksandregular">3300</td>
-                  <td class="font-quicksandregular">3300</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="ui-dashboard-card-footer">
-          <div class="ui-group-button npv--btn">
-            <button disabled="" class="fs-14">
-              <i class="fas fa-chevron-left onwhite"></i></button
-            ><button disabled="" class="fs-14">
-              <i class="fas fa-chevron-right onwhite"></i>
-            </button>
-          </div>
-          <div class="ui-card-footer-options">
-            <p class="onmineshaft mb-0  fs-14">
-              Showing 1 0f 1 pages
+          <div class="txt__showcase">
+            <img src="@/assets/img/txt-showcase.svg" alt="mobile phones" />
+            <p class="txt__history-text">
+              Your transaction history will show here
             </p>
           </div>
         </div>
@@ -185,7 +109,54 @@ export default {
 @import "../../design";
 
 .ui-full-bg-norm {
-  @include ui-full-bg-norm("../../assets/img/clinicHome1.svg");
+  background: linear-gradient(rgba(242, 7, 226, 0.7), rgba(242, 7, 226, 0.6));
+}
+
+.naira {
+  position: relative;
+  top: -1rem;
+  right: -0.5rem;
+  font-size: 14px;
+}
+
+.total {
+  opacity: 0.7;
+}
+
+.btn-color {
+  background: $onboarding-btn-dark !important;
+  color: #fff !important;
+  width: 100px;
+  flex: 1;
+  align-self: flex-end;
+}
+
+.history {
+  flex: 3.5;
+}
+
+.txt__header {
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.divider {
+  width: 98%;
+  margin: auto;
+}
+
+.txt__showcase {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  margin-bottom: 4rem;
+}
+
+.txt__history-text {
+  padding-top: 3rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -194,6 +165,26 @@ export default {
     .ui-card-title {
       margin-bottom: 1rem !important;
     }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .onmobile-column {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .txt__balance-img {
+    margin-right: 7rem;
+  }
+
+  .btn {
+    width: 50% !important;
+    margin: 1rem auto;
+  }
+
+  .txt__showcase {
+    height: auto;
   }
 }
 </style>

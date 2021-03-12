@@ -2,21 +2,17 @@
   <section class="ui-sidebar  sdbr--cllps">
     <div class=" ui-sidebar-primary1">
       <div class="ui-sidebar-primary-header ui-text-center">
-        <!-- check for profile -->
-        <router-link :to="showProfile" class="ui-sidebar-primary-logo"
-          ><img
-            src="https://dms.medbarnagency.com/images/assets/icon@logo-c.svg"
-            alt="Logo"
-            width="50px"
-          />
-          <p class="brand-dblue  fs-15 mt-1 mb-0">
-            metro
-          </p>
-          <span class=" brand-green" v-if="showProfile === '/clinic/profile'"
-            >Profile</span
-          ></router-link
-        >
-        <!-- end check for profile -->
+        <div class="showcolumn ui__header">
+          <div class="mobileHambuger" @click="toogleMenu">
+            <img
+              src="@/assets/img/bar.svg"
+              alt="mobile hamburger"
+              width="20px"
+              height="20px"
+            />
+          </div>
+          <img src="@/assets/img/medbarn.svg" alt="Logo" width="100px" />
+        </div>
 
         <div class="pr-1 d-sm-none">
           <div class="hmb--btn but1">
@@ -37,7 +33,7 @@
           v-for="Icons in sidebarIcons"
           :key="Icons.title"
         >
-          <li>
+          <li v-if="Icons.title !== 'Notifications'">
             <router-link
               :to="Icons.to"
               class="ui-icon-animate "
@@ -58,7 +54,9 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
 export default {
+  computed: mapGetters(["menuIcons"]),
   props: {
     sidebarIcons: {
       type: Array,
@@ -68,6 +66,9 @@ export default {
       type: String,
       required: false,
     },
+  },
+  methods: {
+    ...mapActions(["toogleMenu"]),
   },
 };
 </script>
@@ -90,8 +91,19 @@ export default {
   padding-top: 2.85rem;
   position: absolute;
   bottom: 10px;
-  top: 190px;
+  top: 100px;
   overflow: scroll;
   height: 500px;
+}
+
+.showcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobileHambuger {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 </style>

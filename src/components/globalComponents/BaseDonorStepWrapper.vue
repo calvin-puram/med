@@ -20,14 +20,14 @@
                       <span class="donor__textcolor">{{ step }}</span>
                     </div>
                     <div
-                      class="d-flex align-items-center justify-content-between mb-2 mt-4"
+                      class="d-flex align-items-center justify-content-between auth--brand mb-2 mt-4"
                     >
                       <p class=" dark-blue-bold  mb-0 fs-16">
                         {{ desc }}
                       </p>
 
                       <div class="back__btnText" v-if="!backbtn">
-                        <span style="position: relative; top: 0px">
+                        <span>
                           <img
                             src="@/assets/img/Intersection 1.svg"
                             alt="back arrow"
@@ -98,6 +98,10 @@ export default {
   .form--white .d-flex {
     display: flex !important ;
     text-align: left !important;
+  }
+
+  .donor__width {
+    width: 100%;
   }
 }
 </style>

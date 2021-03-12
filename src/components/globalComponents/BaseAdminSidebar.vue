@@ -38,7 +38,7 @@ export default {
         {
           to: "/provider/clinics",
           title: "Clinics",
-          img: "/img/clinicicon.svg",
+          img: "/img/hospital.svg",
         },
         {
           to: "/provider/donors",

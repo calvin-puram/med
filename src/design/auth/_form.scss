@@ -139,4 +139,25 @@ label {
   .frm--cstm.auth .btn {
     margin-top: 0.9rem;
   }
+
+  .frm--white .bg-white {
+    padding: 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .auth--brand,
+  .auth--brand p,
+  .auth--brand small {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .back__btnText {
+    margin-top: 1rem;
+  }
+
+  .donor__textcolor {
+    text-align: center;
+  }
 }

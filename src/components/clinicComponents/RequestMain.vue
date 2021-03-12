@@ -8,34 +8,19 @@
     notification="/clinic/notifications"
   >
     <section class="mt-2">
-      <div class="ui-dashboard-card">
-        <div class="ui-dashboard-card-header">
-          <div>
-            <form class="d-flex align-items-center frm--card">
-              <input
-                type="text"
-                placeholder="Find by name"
-                class=" form-control ctrl--fnd"
-                id="searchRef"
-              />
-            </form>
-          </div>
-        </div>
-        <div class="ui-dashboard-card">
-          <div class="ui-dashboard-card-body">
-            <h5 class="text__h5">
-              Requests from donors will show here
-            </h5>
-          </div>
-        </div>
-      </div>
+      <BaseRequestComponent
+        name="Request"
+        text="your requests will show here"
+        image="../../assets/img/reload.svg"
+      />
     </section>
   </BaseWrapperWithBackbtn>
 </template>
 
 <script>
+import BaseRequestComponent from "../globalComponents/BaseRequestComponent.vue";
 export default {
-  components: {},
+  components: { BaseRequestComponent },
   props: {
     menuIcons: {
       type: Boolean,

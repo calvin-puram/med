@@ -3,7 +3,7 @@
     <button
       @click="navigateNext"
       type="submit"
-      class="btn btn-adj btn-block bg-dark-blue onwhite my-4  btn-sm"
+      class="btn btn-adj btn-block bg-dark-blue onwhite my-4  btn--sm"
     >
       {{ nextBtnText() }}
       <span v-if="nextBtnText() === 'PROCEED'"

@@ -262,7 +262,8 @@
 
 .ui-sidebar-primary-links li:hover,
 .ui-sidebar-primary-links li.active {
-  background-color: #f1fefb !important;
+  background-color: $onboarding-btn !important;
+  color: #fff !important;
 }
 
 .ui-sidebar-primary-links li a {
@@ -290,6 +291,7 @@
 .ui-sidebar-primary-links li.active a,
 .ui-sidebar-secondary-links li.active a {
   opacity: 1;
+  color: #fff !important;
 }
 
 .ui-sidebar-primary-links li.log--out a {
@@ -300,6 +302,7 @@
 .ui-sidebar-primary-links li a .fe {
   font-size: 22px;
 }
+
 .router-link-exact-active {
   background-color: $onboarding-btn !important;
   color: #fff !important;
@@ -413,7 +416,8 @@
   transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -moz-transform: scale(0.95);
-  color: $onboarding-btn;
+  background: $onboarding-btn;
+  opacity: 0.5;
 }
 
 .ui-dashboard-body .ui-topbar {
@@ -439,8 +443,15 @@
 }
 
 .ui-avatar-profile {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.ui-avatar-profile-large {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   margin-left: 0.5rem;
 }
@@ -546,10 +557,6 @@
   border-top: 1px solid rgba(24, 24, 33, 0.05);
   margin-bottom: 0;
   border-radius: 0 0 5px 5px;
-}
-
-.ui-card-header-options {
-  margin-left: auto;
 }
 
 .ui-card-footer-options {
@@ -1209,13 +1216,7 @@ table thead th {
 .form-method input:focus {
   border-color: rgba(255, 255, 255, 1) !important;
 }
-.avatar-dark {
-  background-color: #1b1b28;
-}
-.avatar-md {
-  font-size: 0.8rem;
-  font-family: ProductSansBold;
-}
+
 .modal-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }

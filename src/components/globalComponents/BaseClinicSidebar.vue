@@ -46,9 +46,14 @@ export default {
           img: "/img/usersicon.svg",
         },
         {
+          to: "/clinic/notifications",
+          title: "Notifications",
+          img: "/img/noty.svg",
+        },
+        {
           to: "/clinic/transactions",
           title: "Transactions",
-          img: "/img/wallet.svg",
+          img: "/img/wallet1.svg",
         },
 
         {

@@ -5,24 +5,24 @@
         <div class="col-md-8 mx-auto">
           <div class="ui-wrapper">
             <div class="frm--white frm--cstm auth signin-form was-validated">
-              <div class="form-space">
+              <div class="">
                 <div class="bg-white ui-rounded-small">
                   <div>
                     <div class="mb-3"></div>
                     <img
                       src="@/assets/img/medbarn.svg"
-                      alt="medbarn"
+                      alt="quiv"
                       style="width: 100px; margin-top: 30px"
                     />
                     <div
-                      class="d-flex align-items-center auth--brand mb-5 pt-5"
+                      class="d-flex align-items-center justify-content-between auth--brand mb-5 pt-5"
                     >
                       <p class=" brand-dgreen fs-20 mb-0 font-weight-bold">
                         Create an agent account
                       </p>
-                      <div class="ml-auto centralize">
+                      <div class=" centralize">
                         <div class="back__btnText">
-                          <span style="position: relative; top: 0px">
+                          <span>
                             <img
                               src="@/assets/img/Intersection 1.svg"
                               alt="back arrow"
@@ -176,7 +176,7 @@
                         <div class="ml-auto center_btn">
                           <button
                             type="submit"
-                            class="btn btn-adj btn-block bg-dark-blue onwhite  btn-sm"
+                            class="btn btn-adj btn-block bg-dark-blue onwhite  btn--sm"
                           >
                             CREATE ACCOUNT
                           </button>
@@ -220,12 +220,6 @@ export default {
 @import "../../design";
 .ui-full-bg-norm {
   @include ui-full-bg-norm("../../assets/img/authbg.png");
-}
-
-.frm--cstm.auth .btn {
-  width: 100%;
-  height: 50px;
-  margin-top: 2rem;
 }
 
 .custom-checkbox {

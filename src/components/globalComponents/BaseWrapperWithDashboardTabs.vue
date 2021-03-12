@@ -64,7 +64,7 @@ export default {
     },
     tabsData: {
       type: Array,
-      required: true,
+      required: false,
     },
     profile: {
       type: String,

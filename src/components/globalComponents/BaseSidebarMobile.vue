@@ -2,23 +2,37 @@
   <section class="ui-sidebar ssbar--open ">
     <div class="ui-sidebar-primary ssbar--open">
       <div class="ui-sidebar-primary-header ui-text-center">
-        <div class="mobileHambuger" @click="toogleMenu">
-          <i class="fas fa-bars  onsilverlight fs-20 mt-2  "></i>
+        <div class="mobileHambuger mt-2" @click="toogleMenu">
+          <img
+            src="@/assets/img/bar.svg"
+            alt="mobile hamburger"
+            width="20px"
+            height="20px"
+          />
         </div>
         <!-- check for profile -->
         <router-link :to="showProfile" class="ui-sidebar-primary-logo"
           ><img
-            src="https://dms.medbarnagency.com/images/assets/icon@logo-c.svg"
-            alt="Logo"
-            width="50px"
+            src="@/assets/img/user-4.jpg"
+            alt="avatar"
+            class="ui-avatar-profile-large"
           />
-          <p class="brand-dblue  fs-15 mt-1 mb-0">
-            metro
+          <p class="normal-text  fs-15 mt-1 mb-0">
+            Abdulbaki
           </p>
-          <span class=" brand-green" v-if="showProfile === '/clinic/profile'"
-            >Profile</span
-          ></router-link
-        >
+          <span class=" dark-blue" v-if="showProfile === '/profile'"
+            >Donor</span
+          >
+          <span class="dark-blue" v-else-if="showProfile === '/clinic/profile'"
+            >Clinic</span
+          >
+
+          <span class=" dark-blue" v-else-if="showProfile === '/agent/profile'"
+            >Agent</span
+          >
+
+          <span class=" dark-blue" v-else>Admin</span>
+        </router-link>
         <!-- end check for profile -->
       </div>
       <div class="ui-sidebar-primary-body ">

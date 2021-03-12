@@ -34,18 +34,18 @@ export default {
         {
           to: "/agent/donors",
           title: "Donors",
-          img: "https://dms.medbarnagency.com/images/assets/icon@donor.svg",
+          img: "/img/usericon.svg",
         },
         {
           to: "/agent/notifications",
-          title: "AgentNoti",
-          img: "https://dms.medbarnagency.com/images/assets/icon@bell.svg",
+          title: "Notifications",
+          img: "/img/noty.svg",
         },
 
         {
           to: "logout",
           title: "Logout",
-          img: "https://dms.medbarnagency.com/images/assets/logout.png",
+          img: "/img/logouticon.svg",
         },
       ],
     };

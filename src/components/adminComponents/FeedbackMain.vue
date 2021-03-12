@@ -4,6 +4,8 @@
     :menuIcons="menuIcons"
     :toogleMenu="toogleMenu"
     link="/provider/agents"
+    profile="/provider/profile"
+    notification="/provider/notifications"
   >
     <section class="mt-2">
       <div class="ui-dashboard-card">
