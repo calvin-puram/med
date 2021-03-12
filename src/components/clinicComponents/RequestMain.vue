@@ -1,9 +1,8 @@
 <template>
-  <BaseWrapperWithBackbtn
+  <BaseWrapper
     dashboardName="Requests"
     :menuIcons="menuIcons"
     :toogleMenu="toogleMenu"
-    link="/clinic/home"
     profile="/clinic/profile"
     notification="/clinic/notifications"
   >
@@ -14,7 +13,7 @@
         image="../../assets/img/reload.svg"
       />
     </section>
-  </BaseWrapperWithBackbtn>
+  </BaseWrapper>
 </template>
 
 <script>
