@@ -1,6 +1,5 @@
 <template>
   <div>
-    <BaseLoader v-if="getClinicLoading && getloading" />
     <BaseWrapper
       dashboardName="Add a new user to your clinic"
       :menuIcons="menuIcons"

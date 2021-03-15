@@ -22,8 +22,9 @@ const actions = {
       );
       if (res && res.data) {
         commit("setLoginStatus", false);
+      } else {
+        commit("setLoginStatus", false);
       }
-      commit("setLoginStatus", false);
 
       return res;
     } catch (err) {
