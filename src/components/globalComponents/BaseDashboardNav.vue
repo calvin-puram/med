@@ -19,7 +19,7 @@
         </div>
         <div>
           <ul class="ui-topbar-options mb-0">
-            <li><img src="@/assets/img/search.svg" alt="search" /></li>
+            <!-- <li><img src="@/assets/img/search.svg" alt="search" /></li> -->
             <li class="ui-notification">
               <router-link :to="notification">
                 <img
@@ -35,12 +35,14 @@
                 <div class="d-flex align-items-center">
                   <div class="ui-profile-name ">
                     <p class="normal-text-bold font-weight-bold m-0 fs-12">
-                      Abdulbaki
+                      {{ profileName ? profileName : "unknown" }}
                     </p>
-                    <p class="normal-text m-0 fs-12">Donor</p>
+                    <p class="normal-text m-0 fs-12">
+                      {{ profileStatus ? profileStatus : "unknown" }}
+                    </p>
                   </div>
                   <img
-                    src="@/assets/img/user-4.jpg"
+                    src="@/assets/img/default.jpg"
                     alt="Avatar"
                     class="ui-avatar-profile"
                   />
@@ -75,6 +77,14 @@ export default {
       required: true,
     },
     notification: {
+      type: String,
+      required: true,
+    },
+    profileName: {
+      type: String,
+      required: true,
+    },
+    profileStatus: {
       type: String,
       required: true,
     },

@@ -1,7 +1,6 @@
 <template>
   <div class="dashboard">
     <BaseClinicSidebar />
-
     <AdduserMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
   </div>
 </template>

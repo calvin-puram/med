@@ -36,7 +36,7 @@
                 src="../../assets/img/transactionimg.svg"
                 alt="transaction"
                 height="200px"
-                class="txt__balance-img"
+                class="txt__balance-img mb-3"
               />
             </div>
           </div>

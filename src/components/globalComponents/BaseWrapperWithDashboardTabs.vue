@@ -13,6 +13,8 @@
             :toogleMenu="toogleMenu"
             :profile="profile"
             :notification="notification"
+            :profileName="profileName"
+            :profileStatus="profileStatus"
           />
           <section class="ui-body-content">
             <div class="ui-body-content-inner">
@@ -71,6 +73,14 @@ export default {
       required: false,
     },
     notification: {
+      type: String,
+      required: false,
+    },
+    profileName: {
+      type: String,
+      required: false,
+    },
+    profileStatus: {
       type: String,
       required: false,
     },

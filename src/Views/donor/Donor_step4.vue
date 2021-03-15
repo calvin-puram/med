@@ -3,201 +3,163 @@
     text="Complete your profile."
     step="4/5"
     desc="Create a donor/surrogate account"
+    :emergencyfullname="form.emergencyfullname"
+    :emergencyphone="form.emergencyphone"
+    :ethnicity="form.ethnicity"
+    :DOB="form.DOB"
+    :religion="form.religion"
+    :complexion="form.complexion"
+    :nationality="form.nationality"
   >
-    <form class="">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Date of birth</label>
-            <datepicker
-              placeholder="02/12/2020"
-              input-class="form-control dob"
-            ></datepicker>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="phone">Phone number</label>
-            <input
-              type="number"
-              class="form-control "
-              placeholder="e.g 081 0000 0000"
-              id="phone"
-              required
-            />
-          </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Date of birth</label>
+          <datepicker
+            v-model="form.DOB"
+            placeholder="02/12/2020"
+            input-class="form-control dob"
+          ></datepicker>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group select__padding">
-            <label class="fs-12 brand-dblue">Country</label>
-            <select class="form-control custom-select" required>
-              <option value="">Select your Country</option>
-              <option
-                :value="country"
-                v-for="country in countries"
-                :key="country.split(0, 1)"
-              >
-                {{ country }}
-              </option>
-            </select>
-          </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Complexion</label
+          ><select
+            class="form-control  custom-select"
+            required
+            v-model="form.complexion"
+            ><option value="">Select complexion</option
+            ><option value="Albino">Albino</option
+            ><option value="Black">Black</option
+            ><option value="Dark">Dark</option
+            ><option value="Yellow">Yellow</option
+            ><option value="Dark Brown">Dark Brown</option
+            ><option value="Fair">Fair</option
+            ><option value="Light">Light</option
+            ><option value="Light Brown">Light Brown</option
+            ><option value="Medium">Medium</option
+            ><option value="Medium Brown">Medium Brown</option
+            ><option value="Olive">Olive</option
+            ><option value="Ruddy">Ruddy</option
+            ><option value="Sallow">Sallow</option
+            ><option value="Other">Other</option></select
+          >
         </div>
+      </div>
+    </div>
 
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="email">Email (Optional)</label>
-            <input
-              type="email"
-              class="form-control "
-              placeholder="e.g you@example.com"
-              id="email"
-              required
-            />
-          </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label id="phone-no">Nationality</label>
+          <input
+            type="text"
+            class="form-control "
+            required=""
+            placeholder="e.g Nigerian"
+            id="phone-no"
+            v-model="form.nationality"
+          />
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <label>Ethnicity</label>
-            <select class="form-control  custom-select" required="">
-              <option value="">Select your ethnicity</option>
-              <option value="Yoruba">Yoruba</option>
-              <option value="Igbo">Igbo</option>
-              <option value="Hausa">Hausa</option>
-              <option value="Others">Others</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="col-md-12">
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control "
-              placeholder="If you selected others, Enter donor ethnicity"
-              id="eth"
-            />
-          </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Religion</label
+          ><select
+            class="form-control  custom-select"
+            required
+            v-model="form.religion"
+            ><option value="">Select donor's religion</option
+            ><option value="christian">Christian</option
+            ><option value="islam">Islam</option
+            ><option value="traditional">Traditional</option
+            ><option value="others">Others</option></select
+          >
         </div>
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Resident Strt No. &amp; strt name</label>
-            <input
-              type="text"
-              class="form-control "
-              placeholder="Your resident street"
-              id="address"
-              required=""
-              value=""
-            />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>City/town of residence</label>
-            <input
-              type="text"
-              class="form-control "
-              required=""
-              placeholder="Your resident town/city"
-              id=""
-            />
-          </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Ethnicity</label>
+          <select
+            class="form-control  custom-select"
+            required
+            v-model="form.ethnicity"
+          >
+            <option value="">Select your ethnicity</option>
+            <option value="Yoruba">Yoruba</option>
+            <option value="Igbo">Igbo</option>
+            <option value="Hausa">Hausa</option>
+            <option value="Others">Others</option>
+          </select>
         </div>
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>State of residence</label>
-            <input
-              type="text"
-              class="form-control "
-              required=""
-              placeholder="Your resident state"
-              id="address"
-              value=""
-            />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Office Strt No. &amp; strt name (Optional)</label>
-            <input
-              type="text"
-              class="form-control "
-              placeholder="Your Office street"
-              id="address"
-              value=""
-            />
-          </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label id="phone-no">Emergency Contact Phone Number</label>
+          <input
+            type="number"
+            class="form-control "
+            required=""
+            placeholder="Emergency Contact Phone Number"
+            id="phone-no"
+            v-model="form.emergencyphone"
+          />
         </div>
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Office City/town (Optional)</label>
-            <input
-              type="text"
-              class="form-control "
-              placeholder="Your office town/city"
-              id="address"
-              value=""
-            />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Office State (Optional)</label>
-            <input
-              type="text"
-              class="form-control "
-              placeholder="Your office state"
-              id="address"
-              value=""
-            />
-          </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label id="contact-name">Emergency Contact Full Name</label>
+          <input
+            type="text"
+            class="form-control "
+            placeholder="Emergency Contact Full Name"
+            id="contact-name"
+            v-model="form.emergencyfullname"
+          />
         </div>
       </div>
+    </div>
 
-      <BaseDonorBtn />
-
-      <div class="ui-text-center mt-2 mb-2">
+    <!-- <div class="ui-text-center mt-2 mb-2">
         Don't have an account?
         <router-link class="dark-blue fs-14" to="/register">
           Sign up</router-link
         >
-      </div>
-    </form>
+      </div> -->
   </BaseDonorStepWrapper>
 </template>
 
 <script>
 import Datepicker from "vuejs-datepicker";
-import axios from "axios";
+
 export default {
   components: {
     Datepicker,
   },
   data() {
     return {
-      countries: [],
+      form: {
+        emergencyfullname: "",
+        emergencyphone: "",
+        ethnicity: "",
+        DOB: "",
+        religion: "",
+        complexion: "",
+        nationality: "",
+      },
     };
-  },
-
-  async mounted() {
-    const { data } = await axios.get("https://restcountries.eu/rest/v2/all");
-    data.forEach((country) => this.countries.push(country.name));
   },
 };
 </script>

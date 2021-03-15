@@ -1,9 +1,8 @@
 <template>
-  <BaseWrapperWithBackbtn
+  <BaseWrapper
     dashboardName="Donors"
     :menuIcons="menuIcons"
     :toogleMenu="toogleMenu"
-    link="/provider/clinics/add"
     profile="/provider/profile"
     notification="/provider/notifications"
   >
@@ -44,30 +43,31 @@
       </div>
     </div>
     <div class="row spec--bx">
-      <div class="col-md-6">
+      <div class="col-md-6 ">
         <div class="ui-dashboard-card">
-          <div class="ui-dashboard-card-body ui-full-bg-norm ui-rounded-small">
-            <h2 class="font-quicksandsemibold brand-alblue fs-24 mt-1">
-              Balance
-            </h2>
-            <h1 class=" fs-40">2350</h1>
-            <div>
-              <p class=" mb-0">
-                Bank:Rubies MFB
+          <div class="ui-dashboard-card-body bg-wrapper  ui-rounded-small">
+            <div class="total__balance-sec">
+              <p class="total onwhite mb-0 fs-24 mt-1">
+                Total Balance
               </p>
-              <p>
-                Acct Number: 7081570004 <br />
-                <small
-                  >Transfer money to this account number to fund your
-                  account.</small
-                >
-              </p>
+              <h1 class=" fs-40 onwhite font-weight-bold">
+                <span class="naira">&#8358;</span>
+                2500.00
+              </h1>
+              <div class="mt-4">
+                <p class=" onwhite mb-0">
+                  Bank: Rubies Microfinance Bank
+                </p>
+                <p class="onwhite">
+                  Acct Number: 7084830006
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </BaseWrapperWithBackbtn>
+  </BaseWrapper>
 </template>
 
 <script>
@@ -87,7 +87,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../design";
-.ui-full-bg-norm {
-  @include ui-full-bg-norm("../../assets/img/clinicHome1.svg");
+.bg-wrapper {
+  background: linear-gradient(rgba(242, 7, 226, 0.7), rgba(242, 7, 226, 0.6));
 }
 </style>

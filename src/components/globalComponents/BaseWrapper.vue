@@ -13,6 +13,8 @@
             :toogleMenu="toogleMenu"
             :profile="profile"
             :notification="notification"
+            :profileName="profileName"
+            :profileStatus="profileStatus"
           />
 
           <section class="ui-body-content">
@@ -26,6 +28,14 @@
                       : ''
                   "
                 >
+                  <div class="inner-img" v-if="bg__img">
+                    <img
+                      src="../../assets/img/allbg.svg"
+                      alt="a lady reading a book"
+                      width="200px"
+                      class="mt-5"
+                    />
+                  </div>
                   <div :class="bg__img ? 'ui-separate mb-1' : ''"></div>
                 </div>
               </div>
@@ -71,6 +81,14 @@ export default {
       type: String,
       required: false,
     },
+    profileName: {
+      type: String,
+      required: false,
+    },
+    profileStatus: {
+      type: String,
+      required: false,
+    },
   },
 };
 </script>
@@ -81,7 +99,14 @@ export default {
 }
 
 .ui-full-bg-norm {
-  @include ui-full-bg-norm("../../assets/img/fullsearchimg.svg");
+  background: linear-gradient(rgba(242, 7, 226, 0.7), rgba(242, 7, 226, 0.6));
+}
+
+.inner-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
 }
 
 @media screen and (max-width: 768px) {

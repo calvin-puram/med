@@ -29,11 +29,25 @@
                 alt="Clinic logo"
                 class="ui-avatar-large"
               />
-              <p class=" brand-dblue mrgt1 fs-20 mb-0">
-                ohealth
+              <p class=" brand-dblue mt-1 fs-20 mb-0">
+                {{
+                  getClinicProfile.clinicName
+                    ? getClinicProfile.clinicName
+                    : "unknown"
+                }}
               </p>
-              <p class=" brand-alblue fs-14 mb-2">
-                cpuram1@gmail.com Kaduna.
+              <p class=" dark-blue-bold fs-14 mb-2">
+                {{
+                  getClinicProfile.businessEmail
+                    ? getClinicProfile.businessEmail
+                    : "unknown"
+                }}
+                <span class="ml-2">{{
+                  getClinicProfile.clinicCity
+                    ? getClinicProfile.clinicCity
+                    : "unknown"
+                }}</span
+                >.
               </p>
             </div>
           </div>
@@ -78,8 +92,9 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
-  components: {},
+  computed: mapGetters(["getClinicProfile"]),
   props: {
     menuIcons: {
       type: Boolean,
@@ -89,6 +104,9 @@ export default {
       type: Function,
       required: true,
     },
+  },
+  created() {
+    this.$store.dispatch("getClinicProfileIfAny");
   },
 };
 </script>

@@ -1,25 +1,31 @@
 <template>
-  <BaseWrapper
-    dashboardName="Requests"
-    :menuIcons="menuIcons"
-    :toogleMenu="toogleMenu"
-    profile="/clinic/profile"
-    notification="/clinic/notifications"
-  >
-    <section class="mt-2">
-      <BaseRequestComponent
-        name="Request"
-        text="your requests will show here"
-        image="../../assets/img/reload.svg"
-      />
-    </section>
-  </BaseWrapper>
+  <div>
+    <BaseLoader v-if="getloading" />
+    <BaseWrapper
+      dashboardName="Requests"
+      :menuIcons="menuIcons"
+      :toogleMenu="toogleMenu"
+      profile="/clinic/profile"
+      notification="/clinic/notifications"
+      :profileName="
+        getClinicProfile.clinicName ? getClinicProfile.clinicName : ''
+      "
+      profileStatus="clinic"
+    >
+      <section class="mt-2">
+        <BaseRequestComponent
+          name="Request"
+          text="your requests will show here"
+          image="../../assets/img/reload.svg"
+        />
+      </section>
+    </BaseWrapper>
+  </div>
 </template>
 
 <script>
-import BaseRequestComponent from "../globalComponents/BaseRequestComponent.vue";
+import { mapGetters } from "vuex";
 export default {
-  components: { BaseRequestComponent },
   props: {
     menuIcons: {
       type: Boolean,
@@ -29,6 +35,10 @@ export default {
       type: Function,
       required: true,
     },
+  },
+  computed: mapGetters(["getClinicProfile", "getClinicLoading", "getloading"]),
+  created() {
+    this.$store.dispatch("getClinicProfileIfAny");
   },
 };
 </script>

@@ -6,7 +6,7 @@
           <div class="ui-wrapper">
             <form
               class="form--white frm--cstm auth was-validated"
-              @submit.prevent="handleLogin"
+              @submit.prevent="handleReg"
             >
               <div class="form-space">
                 <div class="bg-white ui-rounded-small">
@@ -17,11 +17,11 @@
                       style="width: 100px; margin-top: 10px"
                     />
                     <p class=" brand-dgreen fs-20 mb-0 font-weight-bold mt-4">
-                      Sign in to your account
+                      Create your account
                     </p>
 
                     <small class="mb-5"
-                      >Sign in with either your email or phone number</small
+                      >Sign up with either your email and password</small
                     >
                   </div>
 
@@ -67,9 +67,9 @@
                     </i>
                   </button>
                   <div class="ui-text-center mt-2 mb-2">
-                    Don't have an account?
-                    <router-link class="dark-blue fs-14" to="/signup">
-                      Sign up</router-link
+                    Already have an account?
+                    <router-link class="dark-blue fs-14" to="/">
+                      Sign in</router-link
                     >
                   </div>
                 </div>
@@ -85,7 +85,7 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 export default {
-  name: "Login",
+  name: "Signin",
   computed: mapGetters(["getloading", "getAuthErr"]),
   data() {
     return {
@@ -95,21 +95,19 @@ export default {
   },
   methods: {
     ...mapActions(["login"]),
-    async handleLogin() {
+    async handleReg() {
       const payload = {
         email: this.email,
         password: this.password,
-        api: "https://medbarncore.herokuapp.com/api/v1/identity/login",
+        api: "https://medbarncore.herokuapp.com/api/v1/identity/register",
       };
-      await this.login(payload)
-        .then((res) => {
-          if (res && res.data) {
-            this.$router.push("/select-account");
-          } else {
-            this.$noty.error("wrong password/email combination");
-          }
-        })
-        .catch(() => this.$noty.error("wrong password/email combination"));
+      await this.login(payload).then((res) => {
+        if (res && res.data) {
+          this.$router.push("/add-profiles");
+        } else {
+          this.$noty.error(this.getAuthErr[0]);
+        }
+      });
     },
   },
 };

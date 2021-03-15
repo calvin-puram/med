@@ -9,9 +9,11 @@
   >
     <section class="mt-2">
       <div class="ui-dashboard-card">
-        <div class="ui-dashboard-card-header">
-          <div>
-            <form class="d-flex align-items-center frm--card">
+        <div class="">
+          <div
+            class="d-flex align-items-center justify-content-between form-wrapper my-4 mx-4"
+          >
+            <form class=" frm--card form-search">
               <input
                 type="text"
                 placeholder="Find message by title"
@@ -19,26 +21,24 @@
                 id="searchRef"
               />
             </form>
+
+            <router-link
+              to="/provider/tips/add"
+              class="btn btn--sm btn-color form-seperator onwhite align-self-center"
+              >Add Message</router-link
+            >
           </div>
-          <div class="ui-card-header-options">
-            <div class="ui-group-button d-flex align-items-center">
-              <div class="ui-group-button pl-1">
-                <router-link
-                  to="/provider/tips/add"
-                  class="btn btn--sm bg-brand-green onwhite "
-                  >Add Message</router-link
-                >
-              </div>
-            </div>
+          <div class="divider">
+            <hr />
           </div>
         </div>
         <div class="ui-dashboard-card-body">
-          <div class="text-center">
-            <h5 class="text__h5">
-              You currrently have no scheduled messages
-            </h5>
+          <div class="txt__showcase">
+            <img src="@/assets/img/allbg.svg" alt="mobile phones" />
+            <p class="txt__history-text">
+              Your message history will show here
+            </p>
           </div>
-          <div class="table-responsive"></div>
         </div>
       </div>
     </section>
@@ -61,13 +61,45 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.form--seperator {
+  flex: 1;
+}
+
+.divider {
+  width: 98%;
+  margin: auto;
+}
+
+.form-search {
+  flex: 5;
+}
+
+.txt__showcase {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  margin-bottom: 4rem;
+}
+
+.txt__history-text {
+  padding-top: 3rem;
+}
+
 @media screen and (max-width: 768px) {
-  .frm--card .ctrl--fnd {
-    margin-bottom: 1rem;
+  .form-wrapper {
+    flex-direction: column;
   }
 
-  .ui-dashboard-card-header {
-    display: block;
+  .btn {
+    width: 30% !important;
+    margin: 1rem auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .txt__showcase {
+    height: auto;
   }
 }
 </style>

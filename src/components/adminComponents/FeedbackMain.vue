@@ -3,7 +3,6 @@
     dashboardName="Feedbacks"
     :menuIcons="menuIcons"
     :toogleMenu="toogleMenu"
-    link="/provider/agents"
     profile="/provider/profile"
     notification="/provider/notifications"
   >

@@ -13,7 +13,7 @@
         <!-- check for profile -->
         <router-link :to="showProfile" class="ui-sidebar-primary-logo"
           ><img
-            src="@/assets/img/user-4.jpg"
+            src="@/assets/img/default.jpg"
             alt="avatar"
             class="ui-avatar-profile-large"
           />

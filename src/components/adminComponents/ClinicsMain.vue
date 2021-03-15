@@ -10,9 +10,11 @@
   >
     <section class="mt-2">
       <div class="ui-dashboard-card">
-        <div class="ui-dashboard-card-header">
-          <div>
-            <form class="d-flex align-items-center frm--card">
+        <div class="">
+          <div
+            class="d-flex align-items-center justify-content-between form-wrapper my-4 mx-4"
+          >
+            <form class=" frm--card form-search">
               <input
                 type="text"
                 placeholder="Find a clinic by name, email, phone, state, etc"
@@ -20,17 +22,12 @@
                 id="searchRef"
               />
             </form>
-          </div>
-          <div class="ui-card-header-options">
-            <div class="ui-group-button d-flex align-items-center">
-              <div class="mt-3 mt-sm-0">
-                <router-link
-                  class="btn btn--sm bg-brand-green onwhite  req"
-                  to="/provider/clinics/add"
-                  >Add New</router-link
-                >
-              </div>
-            </div>
+
+            <router-link
+              class="btn btn--sm btn-color form-seperator onwhite align-self-center  req"
+              to="/provider/clinics/add"
+              >Add New</router-link
+            >
           </div>
         </div>
         <div class="ui-dashboard-card-body">
@@ -158,4 +155,23 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.form--seperator {
+  flex: 1;
+}
+
+.form-search {
+  flex: 5;
+}
+
+@media screen and (max-width: 768px) {
+  .form-wrapper {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 30% !important;
+    margin: 1rem auto;
+  }
+}
+</style>
