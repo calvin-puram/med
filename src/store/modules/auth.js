@@ -8,9 +8,9 @@ export const state = {
     tokenExp: "",
     userId: "",
   },
-  agentProfile: null,
-  clinicProfile: null,
-  donorProfile: null,
+  agentProfile: {},
+  clinicProfile: {},
+  donorProfile: {},
   loading: false,
   authErr: [],
 };

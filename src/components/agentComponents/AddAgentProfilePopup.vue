@@ -10,84 +10,93 @@
     >
       <form
         class="frm--white frm--cstm auth signin-form was-validated"
-        @submit.prevent="handlesubmit"
+        @submit.prevent="handleSubmit"
       >
-        <div class="form-space">
+        <div class="">
           <div class="bg-white ui-rounded-small">
             <div>
               <div class="mb-3"></div>
               <img
                 src="@/assets/img/medbarn.svg"
-                style="width: 100px; margin-top: 30px"
                 alt="quiv"
+                style="width: 100px; margin-top: 30px"
               />
               <div
                 class="d-flex align-items-center justify-content-between auth--brand mb-5 pt-5"
               >
                 <p class=" brand-dgreen fs-20 mb-0 font-weight-bold">
-                  Add a clinic Profile
+                  Create an agent account
                 </p>
-                <div class=" centralize"></div>
+                <div class=" centralize">
+                  <div class="back__btnText">
+                    <span>
+                      <img
+                        src="@/assets/img/Intersection 1.svg"
+                        alt="back arrow"
+                      />
+                    </span>
+                    &nbsp;
+                    <router-link to="/register">Go Back</router-link>
+                  </div>
+                </div>
               </div>
 
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="clinic-name">Clinic name</label>
+                    <label for="first-name">First name</label>
 
                     <input
                       type="text"
                       class="form-control "
-                      placeholder="e.g. Pedro hospital"
-                      id="clinic-name"
+                      placeholder="e.g. Pedro"
+                      id="first-name"
                       required
-                      v-model="form.clinicName"
+                      v-model="form.firstName"
                     />
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="business-email">Business email</label>
+                    <label>Last name</label>
                     <input
-                      type="email"
+                      type="text"
                       class="form-control "
-                      placeholder="e.g. you@yourwebsite.com"
-                      id="business-email"
+                      placeholder="e.g. John"
+                      id="last-name"
                       required
-                      v-model="form.businessEmail"
+                      v-model="form.lastName"
                     />
                   </div>
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group select__padding">
-                    <label for="address">Official address</label>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="IDNO">ID Number</label>
                     <input
                       type="text"
                       class="form-control "
-                      placeholder="Enter your address"
-                      id="address"
+                      placeholder="Enter your ID number"
+                      id="IDNO"
                       required
-                      v-model="form.address"
+                      v-model="form.IDNO"
                     />
                   </div>
                 </div>
-              </div>
 
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group select__padding">
-                    <label for="desc">Business Description</label>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="IDType">ID Type</label>
                     <input
                       type="text"
                       class="form-control "
-                      placeholder="Describe your business"
-                      id="desc"
+                      placeholder="Enter your ID type"
+                      id="IDType"
+                      v-model="form.IDType"
                       required
-                      v-model="form.description"
                     />
                   </div>
                 </div>
@@ -96,22 +105,12 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label for="state">State</label>
-                    <select
-                      class="form-control custom-select"
-                      required
-                      id="state"
-                      v-model="form.state"
-                    >
-                      <option value="">Select state</option>
-                      <option
-                        :value="state"
-                        v-for="state in states"
-                        :key="state"
-                      >
-                        {{ state }}
-                      </option>
-                    </select>
+                    <label>Date of Birth</label>
+                    <datepicker
+                      placeholder="Select date of establishment"
+                      input-class="form-control"
+                      v-model="form.DOB"
+                    ></datepicker>
                   </div>
                 </div>
               </div>
@@ -119,13 +118,13 @@
               <div class="form-group  mb-0 mt-3">
                 <div class="mb-5 mb-sm-0">
                   <label
-                    class="custom-control custom-checkbox d-flex align-items-center"
+                    class="custom-control  custom-checkbox d-flex align-items-center"
                     ><input
                       v-model="form.terms"
                       type="checkbox"
                       class="custom-control-input"
                       name="example-inline-checkbox1"
-                      required=""
+                      required
                     /><span class="custom-control-label"
                       ><span class="normal-text">I accept &nbsp;</span>
                       <span class=" dark-blue" style="cursor: pointer"
@@ -135,13 +134,13 @@
                   >
                 </div>
 
-                <div class=" center_btn mt-4">
+                <div class="ml-auto center_btn mt-4">
                   <button
                     :disabled="getloading"
                     type="submit"
                     class="btn btn-adj btn-block bg-dark-blue onwhite  btn--sm"
                   >
-                    Add Profile
+                    CREATE ACCOUNT
                     <i v-if="getloading" class="fas fa-spinner fa-spin ml-4">
                     </i>
                   </button>
@@ -151,16 +150,6 @@
           </div>
         </div>
       </form>
-      <!-- <b-button class="mt-3" variant="outline-danger" block @click="hideModal"
-        >Close Me</b-button
-      >
-      <b-button
-        class="mt-2"
-        variant="outline-warning"
-        block
-        @click="toggleModal"
-        >Toggle Me</b-button
-      > -->
     </b-modal>
   </div>
 </template>
@@ -169,37 +158,36 @@
 import { mapActions, mapGetters } from "vuex";
 import states from "@/Utils/state";
 export default {
-  computed: mapGetters(["getClinicProfile", "getloading"]),
+  computed: mapGetters(["getAgentProfile", "getloading"]),
   data() {
     return {
       states,
       form: {
-        clinicName: "",
-        businessEmail: "",
-        address: "",
-        state: "",
-        date: "",
-        description: "",
+        firstName: "",
+        lastName: "",
+        IDNO: "",
+        IDType: "",
+        DOB: "",
         terms: false,
       },
     };
   },
   methods: {
-    ...mapActions(["addClinicProfile"]),
-    handlesubmit() {
+    ...mapActions(["addAgentProfile"]),
+    handleSubmit() {
       if (this.form.terms) {
         const data = {
-          clinicName: this.form.clinicName,
-          BusinessEmail: this.form.businessEmail,
-          ClinicAddress: this.form.address,
-          ClinicCity: this.form.state,
-          BusinessDescription: this.form.description,
+          FirstName: this.form.firstName,
+          LastName: this.form.lastName,
+          IDNO: this.form.IDNO,
+          IDType: this.form.IDType,
+          DOB: this.form.DOB,
         };
-        this.addClinicProfile(data).then((res) => {
+        this.addAgentProfile(data).then((res) => {
           if (res && res.data === true) {
-            this.$store.dispatch("getClinicProfileIfAny");
+            this.$store.dispatch("getAgentProfileIfAny");
             this.hideModal();
-            this.$noty.success("clinic profile added successfully!");
+            this.$noty.success("Agent profile added successfully!");
           } else {
             this.$noty.error("something unexpected happens");
           }
@@ -213,9 +201,7 @@ export default {
       this.$refs["my-modal"].hide();
     },
   },
-  created() {
-    this.$store.dispatch("getClinicProfileIfAny");
-  },
+
   mounted() {
     this.showModal();
   },

@@ -1,11 +1,7 @@
 <template>
   <div class="dashboard">
-    <AddClinicProfilePopup />
-    <ClinicHomeMain
-      :menuIcons="menuIcons"
-      :toogleMenu="toogleMenu"
-      v-if="getClinicProfile !== null"
-    />
+    <AddClinicProfilePopup v-if="getClinicProfile === null" />
+    <ClinicHomeMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
     <BaseClinicSidebar />
   </div>
 </template>
@@ -22,6 +18,9 @@ export default {
   },
   methods: {
     ...mapActions(["toogleMenu"]),
+  },
+  beforeMount() {
+    this.$store.dispatch("getClinicProfileIfAny");
   },
 };
 </script>
