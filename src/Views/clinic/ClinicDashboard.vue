@@ -1,17 +1,24 @@
 <template>
   <div class="dashboard">
+    <AddClinicProfilePopup />
+    <ClinicHomeMain
+      :menuIcons="menuIcons"
+      :toogleMenu="toogleMenu"
+      v-if="getClinicProfile !== null"
+    />
     <BaseClinicSidebar />
-    <ClinicHomeMain :menuIcons="menuIcons" :toogleMenu="toogleMenu" />
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
 import ClinicHomeMain from "@/components/clinicComponents/ClinicHomeMain";
+import AddClinicProfilePopup from "@/components/clinicComponents/AddClinicProfilePopup";
 export default {
-  computed: mapGetters(["menuIcons"]),
+  computed: mapGetters(["menuIcons", "getClinicProfile", "getloading"]),
   components: {
     ClinicHomeMain,
+    AddClinicProfilePopup,
   },
   methods: {
     ...mapActions(["toogleMenu"]),

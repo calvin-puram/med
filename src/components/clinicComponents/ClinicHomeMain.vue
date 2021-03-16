@@ -1,11 +1,9 @@
 <template>
   <div>
-    <BaseLoader v-if="getloading" />
     <BaseWrapperWithDashboardTabs
       dashboardName="Dashboard"
       :menuIcons="menuIcons"
       :toogleMenu="toogleMenu"
-      :tabsData="tabsData"
       profile="/clinic/profile"
       notification="/clinic/notifications"
       :profileName="getClinicProfile.clinicName"
@@ -99,7 +97,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  computed: mapGetters(["getClinicProfile", "getloading"]),
+  computed: mapGetters(["getClinicProfile", "getloading", "getclinicaddload"]),
   props: {
     menuIcons: {
       type: Boolean,
