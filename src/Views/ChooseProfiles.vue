@@ -31,7 +31,7 @@
                 </div>
               </router-link>
 
-              <router-link to="/register/clinic" class="col-lg-4 mb-3">
+              <router-link to="/signup-clinic" class="col-lg-4 mb-3">
                 <div>
                   <div
                     class="bg-white ui-rounded-small auth--bx ui-text-center"
@@ -52,7 +52,7 @@
                 </div>
               </router-link>
 
-              <router-link to="/register/agent" class="col-lg-4 mb-3">
+              <router-link to="/signup-agent" class="col-lg-4 mb-3">
                 <div>
                   <div
                     class="bg-white ui-rounded-small auth--bx ui-text-center"

@@ -2,7 +2,8 @@ import Login from "@/Views/Login";
 import ForgotPassword from "@/Views/ForgotPassword";
 import ChooseProfiles from "@/Views/ChooseProfiles";
 import Selection from "@/Views/Selection";
-import Signup from "@/Views/Signup";
+import SignupClinc from "@/Views/SignupClinic";
+import SignupAgent from "@/Views/SignupAgent";
 
 // CLINIC
 import ClinicDashboard from "@/Views/clinic/ClinicDashboard";
@@ -68,8 +69,16 @@ export default [
   },
   {
     name: "signup",
-    path: "/signup",
-    component: Signup,
+    path: "/signup-clinic",
+    component: SignupClinc,
+    meta: {
+      requiresAuth: false,
+    },
+  },
+  {
+    name: "signup",
+    path: "/signup-agent",
+    component: SignupAgent,
     meta: {
       requiresAuth: false,
     },
@@ -87,7 +96,7 @@ export default [
     path: "/add-profiles",
     component: ChooseProfiles,
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
   },
 
@@ -210,7 +219,7 @@ export default [
     path: "/register/donor_step1",
     component: Donor_step1,
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
   },
   {
@@ -218,7 +227,7 @@ export default [
     path: "/register/donor_step2",
     component: Donor_step2,
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
   },
   {
@@ -226,7 +235,7 @@ export default [
     path: "/register/donor_step3",
     component: Donor_step3,
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
   },
   {
@@ -234,7 +243,7 @@ export default [
     path: "/register/donor_step4",
     component: Donor_step4,
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
   },
   {
@@ -242,7 +251,7 @@ export default [
     path: "/register/donor_step5",
     component: Donor_step5,
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
   },
   {

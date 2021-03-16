@@ -103,7 +103,7 @@ export default {
       };
       await this.login(payload).then((res) => {
         if (res && res.data) {
-          this.$router.push("/add-profiles");
+          this.$router.push("/agent/donors");
         } else {
           this.$noty.error(this.getAuthErr[0]);
         }
