@@ -1,6 +1,6 @@
 # vue3-template
 
-Vue 3 template based on https://github.com/chrisvfritz/vue-enterprise-boilerplate
+Vue 3 template
 
 ## Project setup
 
