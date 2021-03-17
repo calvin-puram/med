@@ -3,11 +3,21 @@
     <div
       class=" d-flex align-items-center justify-content-between txt__header onmobile-column"
     >
-      <h4 class="history font-weight-bold">{{ name }}</h4>
-      <button class="btn btn--sm btn-onboarding btn-onboarding-color onwhite">
+      <h4 class="history normal-text font-weight-bold">{{ name }}</h4>
+      <button
+        class="btn btn--sm btn-onboarding btn-onboarding-color onwhite"
+        v-if="btnText === 'Refresh'"
+      >
         <img src="@/assets/img/reload.svg" class="mr-3" alt="reload icon" />
-        Refresh
+        {{ btnText }}
       </button>
+      <router-link
+        v-else
+        :to="link"
+        class="btn btn--sm btn-onboarding btn-onboarding-color onwhite"
+      >
+        {{ btnText }}
+      </router-link>
     </div>
     <div class="divider">
       <hr />
@@ -36,7 +46,15 @@ export default {
     },
     image: {
       type: String,
-      required: true,
+      required: false,
+    },
+    btnText: {
+      type: String,
+      required: false,
+    },
+    link: {
+      type: String,
+      required: false,
     },
   },
 };

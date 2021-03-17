@@ -7,7 +7,6 @@ import SignupAgent from "@/Views/SignupAgent";
 
 // CLINIC
 import ClinicDashboard from "@/Views/clinic/ClinicDashboard";
-import Clinic from "@/Views/clinic/Clinic";
 import ClinicAddUser from "@/Views/clinic/AddUser";
 import Messages from "@/Views/clinic/Messages";
 import AddMessage from "@/Views/clinic/AddMessage";
@@ -19,6 +18,7 @@ import AvailableDonors from "@/Views/clinic/AvailableDonors";
 import Transaction from "@/Views/clinic/Transaction";
 import Notification from "@/Views/clinic/Notification";
 import Users from "@/Views/clinic/Users";
+import MakeDonorRequest from "@/Views/clinic/MakeDonorRequest";
 //DONOR
 import Donor_step1 from "@/Views/donor/Donor_step1";
 import Donor_step2 from "@/Views/donor/Donor_step2";
@@ -35,7 +35,7 @@ import DonorDashboard from "@/Views/agent/DonorDashboard";
 import AgentNotification from "@/Views/agent/AgentNotification";
 import AgentProfile from "@/Views/agent/Profile";
 import AddDonor from "@/Views/agent/AddDonor";
-import Agent from "@/Views/agent/Agent";
+
 // ADMIN
 import AdminDashboard from "@/Views/admin/AdminDashboard";
 import AdminAddClinic from "@/Views/admin/AdminAddClinic";
@@ -97,23 +97,6 @@ export default [
     component: ChooseProfiles,
     meta: {
       requiresAuth: false,
-    },
-  },
-
-  {
-    name: "Agent",
-    path: "/register/agent",
-    component: Agent,
-    meta: {
-      requiresAuth: true,
-    },
-  },
-  {
-    name: "Clinic",
-    path: "/register/clinic",
-    component: Clinic,
-    meta: {
-      requiresAuth: true,
     },
   },
 
@@ -185,6 +168,14 @@ export default [
     name: "AvailableDonors",
     path: "/clinic/free",
     component: AvailableDonors,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    name: "MakeDonorRequest",
+    path: "/clinic/donor-request",
+    component: MakeDonorRequest,
     meta: {
       requiresAuth: true,
     },

@@ -36,6 +36,27 @@ const actions = {
     }
   },
 
+  async clinicDonorsRequest({ commit }, payload) {
+    try {
+      commit("setLoginStatus", true);
+      const res = await jwtInterceptor.post(
+        "https://medbarncore.herokuapp.com/api/v1/clinic/process/request",
+        payload
+      );
+      if (res && res.data) {
+        commit("setLoginStatus", false);
+      } else {
+        commit("setLoginStatus", false);
+      }
+
+      return res;
+    } catch (err) {
+      if (err && err.response.data) {
+        commit("auth_err", err.response.data.error);
+      }
+    }
+  },
+
   async clinicUsers({ commit }, payload) {
     try {
       commit("setLoginStatus", true);

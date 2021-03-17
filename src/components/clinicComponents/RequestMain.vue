@@ -16,7 +16,8 @@
         <BaseRequestComponent
           name="Request"
           text="your requests will show here"
-          image="../../assets/img/reload.svg"
+          btnText="Make Donor Request"
+          link="/clinic/donor-request"
         />
       </section>
     </BaseWrapper>

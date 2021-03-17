@@ -39,6 +39,7 @@
         name="Request"
         text="your requests will show here"
         image="../../assets/img/reload.svg"
+        btnText="Refresh"
       />
     </section>
   </BaseWrapperWithDashboardTabs>
