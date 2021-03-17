@@ -15,6 +15,8 @@ export const jwtDecrypt = (token) => {
 
 export const tokenAlive = (exp) => {
   if (Date.now() >= exp * 1000) {
+    localStorage.removeItem("token");
+    localStorage.removeItem("refreshToken");
     return false;
   }
   return true;

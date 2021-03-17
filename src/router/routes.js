@@ -68,7 +68,7 @@ export default [
     },
   },
   {
-    name: "signup",
+    name: "signup-clinic",
     path: "/signup-clinic",
     component: SignupClinc,
     meta: {
@@ -76,7 +76,7 @@ export default [
     },
   },
   {
-    name: "signup",
+    name: "signup-agent",
     path: "/signup-agent",
     component: SignupAgent,
     meta: {

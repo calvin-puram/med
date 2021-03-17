@@ -4,7 +4,7 @@
       src="@/assets/img/spinner.gif"
       alt="spinner"
       width="100px"
-      class="ml-4"
+      class="mar"
     />
   </div>
 </template>

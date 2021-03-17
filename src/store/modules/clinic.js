@@ -4,12 +4,14 @@ const state = {
   clinicLoading: false,
   clinicErr: [],
   clinicUsers: [],
+  searchDonors: [],
 };
 
 const getters = {
   getClinicLoading: (state) => state.clinicLoading,
   getClinicErr: (state) => state.clinicErr,
   getClinicUsers: (state) => state.clinicUsers,
+  getSearchDonors: (state) => state.searchDonors,
 };
 
 const actions = {
@@ -53,6 +55,35 @@ const actions = {
       }
     }
   },
+
+  async searchDonors({ commit }, payload) {
+    try {
+      commit("setLoginStatus", true);
+
+      const res = await jwtInterceptor.get(
+        `https://medbarncore.herokuapp.com/api/v1/agency/donors/?maxheight=${parseInt(
+          payload.maxHeight
+        )}&minHeight=${payload.minHeight}&Complexion=${
+          payload.complexion
+        }&ethnicity=${payload.ethnicity}&levelofeducatio=${
+          payload.education
+        }&Gender=${payload.gender}&Religion=${
+          payload.religion
+        }&minAge=${parseInt(payload.minAge)}&MaxAge=${parseInt(payload.maxAge)}`
+      );
+      if (res && res.data) {
+        commit("setLoginStatus", false);
+        commit("searchDonors", res.data.data);
+      }
+      commit("setLoginStatus", false);
+
+      return res;
+    } catch (err) {
+      if (err && err.response.data) {
+        commit("auth_err", err.response.data.error);
+      }
+    }
+  },
 };
 
 const mutations = {
@@ -62,6 +93,10 @@ const mutations = {
 
   clinicUsers(state, value) {
     state.clinicUsers = value;
+  },
+
+  searchDonors(state, value) {
+    state.searchDonors = value;
   },
 
   auth_err(state, err) {
