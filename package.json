@@ -49,10 +49,7 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "quotes": [
-        "error",
-        "double"
-      ],
+      "quotes": "off",
       "linebreak-style": "off",
       "no-unused-vars": "off",
       "semi": [

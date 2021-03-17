@@ -1183,7 +1183,7 @@
 .table thead th,
 table thead th {
   vertical-align: middle;
-  border-bottom: none;
+  // border-bottom: none;
   font-size: 12px;
   font-family: ProductSansBold;
 }
@@ -1477,19 +1477,19 @@ a:hover {
 
 .table th,
 .text-wrap table th {
-  color: #334261;
+  color: #fff;
   text-transform: uppercase;
 }
 
 .table th:first-child,
 .table tr td:first-child,
 .text-wrap table th:first-child {
-  padding-left: 0;
+  padding-left: 1rem;
 }
 .table th:last-child,
 .table tr td:last-child,
 .text-wrap table th:last-child {
-  padding-right: 0;
+  padding-right: 1rem;
 }
 .table tr td {
   font-size: 14px;

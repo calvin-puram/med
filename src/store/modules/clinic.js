@@ -2,6 +2,7 @@ import jwtInterceptor from "@/Utils/jwtInterceptor";
 
 const state = {
   clinicLoading: false,
+  clinicProcessRequests: [],
   clinicErr: [],
   clinicUsers: [],
   searchDonors: [],
@@ -12,6 +13,7 @@ const getters = {
   getClinicErr: (state) => state.clinicErr,
   getClinicUsers: (state) => state.clinicUsers,
   getSearchDonors: (state) => state.searchDonors,
+  getclinicProcessRequest: (state) => state.clinicProcessRequests,
 };
 
 const actions = {
@@ -105,6 +107,26 @@ const actions = {
       }
     }
   },
+  async clinicProcessRequest({ commit }) {
+    try {
+      commit("setLoginStatus", true);
+
+      const res = await jwtInterceptor.get(
+        `https://medbarncore.herokuapp.com/api/v1/clinic/processes/`
+      );
+      if (res && res.data) {
+        commit("setLoginStatus", false);
+        commit("processRequest", res.data.data);
+      }
+      commit("setLoginStatus", false);
+
+      return res;
+    } catch (err) {
+      if (err && err.response.data) {
+        commit("auth_err", err.response.data.error);
+      }
+    }
+  },
 };
 
 const mutations = {
@@ -118,6 +140,10 @@ const mutations = {
 
   searchDonors(state, value) {
     state.searchDonors = value;
+  },
+
+  processRequest(state, value) {
+    state.clinicProcessRequests = value;
   },
 
   auth_err(state, err) {
