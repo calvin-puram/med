@@ -21,7 +21,7 @@
 
             <router-link
               to="/clinic/donor-request"
-              class="btn btn--sm btn-onboarding btn-onboarding-color onwhite"
+              class="btn btn--sm btn-onboarding bg-dark-blue onwhite"
             >
               Make Donor Request
             </router-link>
@@ -58,6 +58,9 @@
                         </th>
                         <th class=" pb-1 ui-capitalize fs-14">
                           for Customer Name
+                        </th>
+                        <th class=" pb-1 ui-capitalize fs-14">
+                          clinic username
                         </th>
                         <th class=" pb-1 ui-capitalize fs-14">
                           process status
@@ -171,10 +174,6 @@ export default {
 }
 .btn-onboarding {
   flex: 1;
-}
-
-.btn-onboarding-color {
-  background: $onboarding-btn-dark;
 }
 
 @media screen and (max-width: 768px) {
